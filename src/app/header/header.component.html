@@ -1,0 +1,19 @@
+<nav class="bg-transparent">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="header flex justify-between">
+      <div class="logo">
+        <img class="w-[50px]" src="/logo.png" alt="helloleemo" />
+      </div>
+      <div class="menuList">
+        <ul class="flex space-x-4">
+          <li *ngFor="let item of menuList" class="cursor-pointer">
+            <div>
+              <span class="text-dark">{{ item.name }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</nav>

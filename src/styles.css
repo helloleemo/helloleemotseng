@@ -1,3 +1,47 @@
+/* googel font - Ubuntu */
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* tailwindcss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom styles */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Ubuntu", Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700; /* Bold */
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+}
