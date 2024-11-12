@@ -22,10 +22,10 @@ export class HeaderComponent implements AfterViewInit {
 
   menuList:menuItems[] = [
     {
-      name:"list",
+      name:"listlistlistlist",
       link:""
     },{
-      name:"list",
+      name:"listlistlist",
       link:""
     },{
       name:"list",

@@ -1,19 +1,12 @@
-<nav class="bg-transparent">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="header flex justify-between">
-      <div class="logo">
-        <img class="w-[50px]" src="/logo.png" alt="helloleemo" />
+<div class="absolute top-[20px] left-1/2 -translate-x-1/2">
+  <div class="border border-black w-fit rounded-full">
+    <div class="w-fit h-[40px] sm:h-[50px] flex space-x-2 p-1">
+      <div
+        *ngFor="let item of menuList"
+        class="border border-red-400 rounded-full w-full px-3 sm:py-2 py-1"
+      >
+        <p class="text-center">{{ item.name }}</p>
       </div>
-      <div class="menuList">
-        <ul class="flex space-x-4">
-          <li *ngFor="let item of menuList" class="cursor-pointer">
-            <div>
-              <span class="text-dark">{{ item.name }}</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div></div>
     </div>
   </div>
-</nav>
+</div>

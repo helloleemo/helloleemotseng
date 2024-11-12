@@ -1,0 +1,15 @@
+<div class="pt-[75px] sm:pt-[150px]"></div>
+<div class="tags p-3 flex space-x-2 flex-wrap">
+  <div
+    *ngFor="let tag of tagList"
+    class="border border-red-300 rounded-full w-fit px-3 py-1"
+  >
+    <p>{{ tag.name }}</p>
+  </div>
+</div>
+<div class="p-3 grid gap-2 sm:grid-cols-3">
+  <div
+    *ngFor="let item of platformList"
+    class="border border-black rounded-lg w-full h-[150px]"
+  ></div>
+</div>
