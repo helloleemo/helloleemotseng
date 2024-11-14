@@ -1,4 +1,14 @@
-<div class="max-w-5xl mx-auto">
-  <app-header></app-header>
-  <app-platform></app-platform>
-</div>
+<div class="pt-[75px] sm:pt-[100px]"></div>
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<!-- 滑鼠樣式 -->
+<div
+  [class]="
+    mouseService.isPointer
+      ? 'cursor-none fixed pointer-events-none rounded-full w-8 h-8 bg-primary/60 backdrop-blur-[2px] backdrop-hue-rotate-60 transition-colors duration-200  transform -translate-x-1/2 -translate-y-1/2'
+      : 'cursor-none fixed pointer-events-none rounded-full w-6 h-6 bg-dark/10 backdrop-blur-[2px] backdrop-hue-rotate-180 transform -translate-x-1/2 -translate-y-1/2'
+  "
+  [style.left.px]="mouseService.cursorX"
+  [style.top.px]="mouseService.cursorY"
+></div>

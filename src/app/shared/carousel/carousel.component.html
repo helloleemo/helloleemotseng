@@ -1,0 +1,28 @@
+<div class="carousel-container overflow-hidden relative w-full h-[200px]">
+  <div class="carousel-content flex items-center gap-4 absolute" #carousel>
+    <!-- 原始圖片列表 -->
+    <ng-container *ngFor="let img of images">
+      <div class="shrink-0 border border-dark rounded-md">
+        <!-- <img
+          [src]="img.src"
+          [alt]="'Image ' + img"
+          class="h-full object-cover rounded-md shadow-md"
+        /> -->
+      </div>
+    </ng-container>
+
+    <!-- 克隆圖片列表 -->
+    <ng-container *ngFor="let img of images">
+      <div
+        class="shrink-0 border border-dark rounded-md"
+        style="width: 350px; height: 200px"
+      >
+        <!-- <img
+          [src]="img.src"
+          [alt]="'Image ' + img"
+          class="h-full object-cover rounded-md shadow-md"
+        /> -->
+      </div>
+    </ng-container>
+  </div>
+</div>

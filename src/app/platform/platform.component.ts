@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatRipple } from '@angular/material/core';
 
 
 interface platformItems {
   name: string;
   description: string;
+  linkto?: string;
 }
 interface tagItems{
   id: number;
@@ -15,9 +17,8 @@ interface tagItems{
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatRipple],
   templateUrl: './platform.component.html',
-  styleUrl: './platform.component.css'
 })
 export class PlatformComponent {
   title = 'platform';
@@ -26,7 +27,20 @@ export class PlatformComponent {
   platformList: platformItems[] = [
     {
       name: "item1",
-      description: "description1"
+      description: "description1",
+      linkto:""
+    }, 
+    {
+      name: "item2",
+      description: "description1",
+      linkto:""
+
+    }, 
+    {
+      name: "item2",
+      description: "description1",
+      linkto:""
+
     }, 
     {
       name: "item2",
@@ -34,23 +48,21 @@ export class PlatformComponent {
     }, 
     {
       name: "item2",
-      description: "description1"
+      description: "description1",
+      linkto:""
+
     }, 
     {
       name: "item2",
-      description: "description1"
+      description: "description1",
+      linkto:""
+
     }, 
     {
       name: "item2",
-      description: "description1"
-    }, 
-    {
-      name: "item2",
-      description: "description1"
-    }, 
-    {
-      name: "item2",
-      description: "description1"
+      description: "description1",
+      linkto:""
+
     }
   ]
   tagList:tagItems[]=[

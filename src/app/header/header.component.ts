@@ -1,5 +1,10 @@
+
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {  Component,  Input } from '@angular/core';
+
+import { MatRippleModule } from '@angular/material/core';
+import { RouterModule} from '@angular/router';
+import { MouseService } from '../services/mouse.service';
 
 
 interface menuItems {
@@ -11,22 +16,21 @@ interface menuItems {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule,MatRippleModule],
   templateUrl: './header.component.html',
+ animations: [
+  ]
 
 }) 
-export class HeaderComponent implements AfterViewInit {
-  @ViewChild('menuButton') menuButton!: ElementRef;
-
-  isOpen = false;  
+export class HeaderComponent   {
 
   menuList:menuItems[] = [
     {
       name:"listlistlistlist",
-      link:""
+      link:"/"
     },{
       name:"listlistlist",
-      link:""
+      link:"/platform"
     },{
       name:"list",
       link:""
@@ -36,34 +40,15 @@ export class HeaderComponent implements AfterViewInit {
     }
   ]
 
+  constructor(public mouseService:MouseService){
 
-
-  toggleMenu() {
-    this.isOpen = !this.isOpen;
   }
 
-  closeMenu() {
-    this.isOpen = false;
+  selectedItem:string = "listlistlistlist";
+
+  selectItem(item:string){
+    this.selectedItem = item;
   }
 
 
-  ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            this.closeMenu();
-          }
-        });
-      },
-      {
-        root: null,
-        threshold: 0
-      }
-    );
-
-    if (this.menuButton) {
-      observer.observe(this.menuButton.nativeElement);
-    }
-  }
 }

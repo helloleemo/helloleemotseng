@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { PlatformComponent } from './platform/platform.component';
+import { RouterOutlet } from '@angular/router';
+import { MouseService } from './services/mouse.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent,PlatformComponent],
+  imports: [HeaderComponent, RouterOutlet,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = '2025PF';
+
+  constructor(public mouseService: MouseService) {
+  }
 }
