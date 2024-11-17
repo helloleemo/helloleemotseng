@@ -6,19 +6,19 @@ import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/materia
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 
-const globalRippleConfig: RippleGlobalOptions = {
-  disabled: false,
-  animation: {
-    enterDuration: 300,
-    exitDuration: 100
-  }
-};
+// const globalRippleConfig: RippleGlobalOptions = {
+//   disabled: false,
+//   animation: {
+//     enterDuration: 300,
+//     exitDuration: 100,
+//   }
+// };
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes), 
     provideAnimations(), 
     provideHttpClient(),
-    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig } 
+    // { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig } 
   ]
 });

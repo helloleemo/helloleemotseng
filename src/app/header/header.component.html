@@ -1,5 +1,5 @@
-<div class="fixed top-[20px] left-1/2 -translate-x-1/2">
-  <div class="border bg-dark/40 w-fit rounded-full">
+<div class="fixed top-[20px] left-1/2 -translate-x-1/2 z-10">
+  <div class="border bg-dark/40 backdrop-blur-[5px] w-fit rounded-full">
     <div class="h-[40px] sm:h-[50px] flex space-x-2 p-1">
       <div
         (mouseenter)="mouseService.togglePointer(true)"
@@ -9,13 +9,18 @@
         (click)="selectItem(item.name)"
         [class]="
           selectedItem === item.name
-            ? 'border border-white bg-white text-dark/60'
-            : 'border border-transparent hover:bg-white/10 transition-all text-white/80'
+            ? 'border border-white bg-white text-dark/60 backdrop-blur-[5px]'
+            : 'border border-transparent  hover:bg-white/10   text-white/80'
         "
         class="transition-all duration-300 rounded-full px-3 sm:py-2 py-1"
       >
-        <p class="text-center">{{ item.name }}</p>
+        <p class="text-center" [innerHTML]="item.name">
+          {{ item.name }}
+        </p>
       </div>
     </div>
   </div>
+</div>
+<div class="switch fixed top-[35px] right-20">
+  <i class="material-icons">translate</i>
 </div>

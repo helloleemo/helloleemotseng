@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import {  Component,  Input } from '@angular/core';
+import {  Component,  inject,  Input } from '@angular/core';
 
 import { MatRippleModule } from '@angular/material/core';
 import { RouterModule} from '@angular/router';
@@ -26,25 +26,24 @@ export class HeaderComponent   {
 
   menuList:menuItems[] = [
     {
-      name:"listlistlistlist",
+      name:"LeeMo",
       link:"/"
     },{
-      name:"listlistlist",
+      name:"Platform",
       link:"/platform"
     },{
-      name:"list",
-      link:""
+      name:"Articles",
+      link:"/articles"
     },{
-      name:"list",
-      link:""
+      name:`<p class="flex items-center"><i class="material-icons">download</i>Download<p>`,
+      link:"/"
     }
   ]
 
-  constructor(public mouseService:MouseService){
-
-  }
-
-  selectedItem:string = "listlistlistlist";
+  mouseService = inject(MouseService);
+  // constructor(public mouseService:MouseService){
+  // }
+  selectedItem:string = "LeeMo";
 
   selectItem(item:string){
     this.selectedItem = item;

@@ -1,0 +1,85 @@
+<div class="max-w-5xl p-3 mx-auto">
+  <h1>Develop Log.</h1>
+  <div class="pb-[50px] text-justify space-y-2">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nesciunt
+      saepe labore ea, commodi dignissimos minus, culpa qui doloremque illum
+      natus! Dolores in veniam rem quam unde, repudiandae reiciendis iure quidem
+      suscipit error iusto deleniti nostrum. Natus, eveniet quod dolore ipsa
+      quibusdam vel, voluptas distinctio mollitia, dolorum minima velit
+      accusantium.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur magni
+      vero exercitationem. Iure assumenda fugiat vel nulla dolorum id
+      laboriosam!
+    </p>
+  </div>
+  <!-- Search -->
+
+  <div class="flex flex-col justify-start space-y-5 pb-10">
+    <div class="searchBar flex sm:w-fit">
+      <input
+        (mouseenter)="mouseService.togglePointer(true)"
+        (mouseleave)="mouseService.togglePointer(false)"
+        type="text"
+        class="w-full cursor-none p-2 border rounded-md focus:outline-primary/30"
+        placeholder="Search article..."
+      />
+      <button
+        (mouseenter)="mouseService.togglePointer(true)"
+        (mouseleave)="mouseService.togglePointer(false)"
+        class="cursor-none p-2 px-5 ml-2 border rounded-md bg-dark/60 text-white/80 hover:bg-dark/70"
+      >
+        Search
+      </button>
+    </div>
+    <div class="tags flex flex-wrap gap-3">
+      <div
+        (mouseenter)="mouseService.togglePointer(true)"
+        (mouseleave)="mouseService.togglePointer(false)"
+        *ngFor="let tag of articleTags"
+        class="flex w-fit bg-dark/5 transition-all hover:bg-dark/10 text-dark/50 border rounded-full px-4 py-1"
+      >
+        <p>#{{ tag.name }}(<span>12</span>)</p>
+      </div>
+    </div>
+  </div>
+  <!-- Articles -->
+  <div *ngFor="let article of articleList; let i = index" class="articles">
+    <div
+      (mouseenter)="mouseService.togglePointer(true)"
+      (mouseleave)="mouseService.togglePointer(false)"
+      class="cards p-8 my-5 w-full rounded-md bg-white hover:border"
+    >
+      <div class="content flex flex-col space-y-2">
+        <div class="category flex space-x-2">
+          <div *ngFor="let category of article.category" class="">
+            <p
+              class="w-fit text-dark/60 border border-dark/60 rounded-full px-4 py-1"
+            >
+              {{ category }}
+            </p>
+          </div>
+        </div>
+        <div class="title">
+          <h4>{{ article.title }}</h4>
+        </div>
+        <div class="content line-clamp-3 text-justify">
+          {{ article.content }}
+        </div>
+        <div class="date text-dark/50">{{ article.date }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Up to top -->
+<div class="upIcon">
+  <button
+    (mouseenter)="mouseService.togglePointer(true)"
+    (mouseleave)="mouseService.togglePointer(false)"
+    class="cursor-none p-2 px-5 border rounded-full bg-dark/60 text-white/80 hover:bg-dark/70"
+  >
+    <i class="material-icons">arrow_upward</i>
+  </button>
+</div>
