@@ -1,4 +1,3 @@
-import { FooterComponent } from './../footer/footer.component';
 import { Component } from '@angular/core';
 import { CarouselComponent } from '../shared/carousel/carousel.component';
 import { FormComponent} from '../form/form.component';
@@ -6,7 +5,7 @@ import { FormComponent} from '../form/form.component';
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CarouselComponent, FormComponent, FooterComponent],
+  imports: [CarouselComponent, FormComponent],
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {

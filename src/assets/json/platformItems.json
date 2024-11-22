@@ -3,13 +3,13 @@
     "category": ["Product", "All"],
     "name": "item1",
     "description": "description1",
-    "linkto": ""
+    "linkto": "/img/1wa4b-7zivn.gif"
   },
   {
-    "category": ["Graphics"],
+    "category": ["Graphics","All"],
     "name": "item2",
-    "description": "description1",
-    "linkto": ""
+    "description": "",
+    "linkto": "/favicon.ico"
   },
   {
     "category": ["Graphics"],

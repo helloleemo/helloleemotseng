@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Component, inject, Injectable, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
 import { MouseService } from '../services/mouse.service';
+import { ChallengesComponent } from './cards/challenges/challenges.component';
 
 
 interface platformItems {
@@ -35,12 +36,13 @@ export class PlatformComponent implements OnInit {
   
   ngOnInit(){
     this.http.get<platformItems[]>('/assets/json/platformItems.json')
-    .subscribe(data=>{
-      this.platformList = data;},
+    .subscribe(data=> 
+      {
+      this.platformList = data;
+      },
       error =>{
         console.log("Error", error);
       }
-    
     );
   }
 

@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 0px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background: #42a7a1;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 220px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  width: 100%;
+  height: 60px;
+  background: #f1ba64;
+  position: relative;
+}
+
+.cardTitle .big {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cardTitle .small {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.cardTitle .title {
+  top: 12px;
+  left: 15px;
+}
+
+.cardTitle .date {
+  top: 30px;
+  left: 15px;
+}
+
+.cardTitle .type {
+  top: 14px;
+  right: 15px;
+}
+
+.cardTitle .value {
+  top: 28px;
+  right: 15px;
+}
+
+.content {
+  background: #fff;
+}
+
+.content .parameter {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+
+.content .parameter span {
+  position: relative;
+  font-size: 9px;
+  line-height: 13px;
+  color: #808080;
+  padding: 0 10px 0 25px;
+}
+
+.content .parameter span::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 11px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.content .parameter .red::before {
+  background: #ff5151;
+}
+
+.content .parameter .blue::before {
+  background: #2894ff;
+}
+
+.content .statistic {
+  position: relative;
+  width: 260px;
+  height: 81px;
+  margin: 0 auto;
+}
+
+.content .statistic .line-1,
+.content .statistic .line-2,
+.content .statistic .line-3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+  height: 1px;
+}
+
+.content .statistic .line-2 {
+  top: 40px;
+}
+
+.content .statistic .line-3 {
+  bottom: 0;
+}
+
+.content .statistic .date svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content .statistic .date polyline {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 300;
+  animation: animate-data-line 2s linear forwards;
+  stroke-dashoffset: 300;
+}
+
+.content .statistic .date.red polyline {
+  stroke: #ff5151;
+}
+
+.content .statistic .date.blue polyline {
+  stroke: #2894ff;
+}
+
+.content .statistic .date .tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 13px;
+  transform: translate(-50%, 10px);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 11px;
+  color: #fff;
+  padding: 8px 6px;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.content .statistic .date .tooltip::after {
+  display: block;
+  content: "";
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  transform: rotate(45deg);
+}
+
+.content .statistic .date [class^="point-"] {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.content .statistic .date [class^="point-"]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.content .statistic .date.red [class^="point-"],
+.content .statistic .date.red .tooltip,
+.content .statistic .date.red .tooltip:after {
+  background: #ff5151;
+}
+
+.content .statistic .date.blue [class^="point-"],
+.content .statistic .date.blue .tooltip,
+.content .statistic .date.blue .tooltip:after {
+  background: #2894ff;
+}
+
+.content .days {
+  width: 280px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.content .days .day {
+  display: block;
+  float: left;
+  width: calc(100% / 7);
+  font-size: 9px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@keyframes animate-data-line {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animate-data-point {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
