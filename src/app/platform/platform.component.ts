@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
 import { MouseService } from '../services/mouse.service';
-import { ChallengesComponent } from './cards/challenges/challenges.component';
+import { CardsService } from '../services/cards.service';
+import { CardInterface } from '../services/cards.service';
+import { RouterLink } from '@angular/router';
 
 
-interface platformItems {
-  category: string[];
-  name: string;
-  description: string;
-  linkto?: string;
-}
+
+
 interface tagItems {
   id: number;
   name: string;
@@ -21,30 +19,14 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple],
+  imports: [CommonModule, MatRipple, RouterLink],
   templateUrl: './platform.component.html',
 })
 export class PlatformComponent implements OnInit {
   title = 'platform';
   mouseService = inject(MouseService);
   http = inject(HttpClient);
-  // constructor(public mouseService:MouseService){}
-
-
-  // Data list
-  platformList: platformItems[] = [];
-  
-  ngOnInit(){
-    this.http.get<platformItems[]>('/assets/json/platformItems.json')
-    .subscribe(data=> 
-      {
-      this.platformList = data;
-      },
-      error =>{
-        console.log("Error", error);
-      }
-    );
-  }
+  cardsService = inject(CardsService);
 
   tagList: tagItems[] = [
     {
@@ -74,23 +56,34 @@ export class PlatformComponent implements OnInit {
     }
   ]
 
-  selectedTag:string = "All";
+  // Cards list
 
-  selectTag(tag:string){
+  cardList: CardInterface[] = [];
+
+  ngOnInit(): void {
+    this.cardList = this.cardsService.cardsList();
+  }
+
+  selectedTag: string = "All";
+
+  selectTag(tag: string) {
     this.selectedTag = tag;
     // console.log(this.selectedTag);
   }
-  filteredPlatformList():platformItems[]{
-    if (this.selectedTag === "All"){
-      return this.platformList;
+
+  filterCards(): CardInterface[] {
+    if (this.selectedTag === "All") {
+      return this.cardList;
     }
-    return this.platformList.filter(item =>
-      item.category.includes(this.selectedTag)
-    );
+    return this.cardList.filter((card) => card.tag === this.selectedTag);
   }
 
-
-
-
+  hoverActive:boolean = false;
+  showHover(linkto: string): void {
+    this.hoverActive = linkto !== ''; 
+  }
+  hideHover(): void {
+    this.hoverActive = false;
+  }
 
 }

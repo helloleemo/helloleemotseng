@@ -1,89 +1,83 @@
 <div class="max-w-5xl p-3 mx-auto">
-  <h1>Hello, I'm LeeMo</h1>
-  <div class="pb-[50px]">
-    <p>Frontend Developer.</p>
-    <p>I'm responsible for</p>
-  </div>
+  <h1>{{ greeting }}</h1>
+  <div class="pb-[50px]" [innerHTML]="description"></div>
 </div>
 
 <app-carousel></app-carousel>
 
 <div class="border border-transparent border-b-dark mt-[100px] mb-[50px]"></div>
 <div class="max-w-5xl p-3 mx-auto">
-  <h1>Lorem, ipsum dolor.</h1>
-
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, vel.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-
+  <h1>{{ section1Title }}</h1>
+  <div [innerHTML]="section1Description"></div>
   <div class="py-[20px]">
     <div class="imgBox my-3 border border-dark rounded-md h-[200px]">
-      <!-- <img
-        class="object-cover w-full h-full rounded-md"
-        src="https://picsum.photos/600/400"
-        alt=""
-      /> -->
+      <img [src]="section1Img" alt="" />
     </div>
     <div class="content my-3">
       <p class="text-justify font-light leading-relaxed text-dark/80">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-        inventore temporibus id, consequuntur animi voluptate dolorem sit ut
-        nesciunt. Qui?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quae ea molestias sequi at veritatis iusto minima enim delectus, ducimus
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque sed,
-        sint in suscipit facere quibusdam nam illo, autem quisquam expedita
-        magni at facilis! Libero aliquam sequi incidunt sapiente dolores
-        provident rem ut possimus vero similique ullam ratione deleniti ipsum
-        dolor sed nam laudantium architecto quidem, facilis ducimus. In,
-        repellat ad.
+        {{ section1Description2 }}
       </p>
     </div>
     <div class="grid grid-cols-3 gap-1 sm:gap-3 md:gap-5">
-      <div
-        class="w-full col-span-2 h-[200px] border border-dark rounded-md"
-      ></div>
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
-      <div
-        class="w-full col-span-2 h-[200px] border border-dark rounded-md"
-      ></div>
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
+      <div class="w-full col-span-2 h-[200px] border border-dark rounded-md">
+        <img [src]="img1" alt="" />
+      </div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="img2" alt="" />
+      </div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="img3" alt="" />
+      </div>
+      <div class="w-full col-span-2 h-[200px] border border-dark rounded-md">
+        <img [src]="img4" alt="" />
+      </div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="img5" alt="" />
+      </div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="img6" alt="" />
+      </div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="img7" alt="" />
+      </div>
     </div>
   </div>
 </div>
 <div class="mt-[100px] py-[100px] text-center bg-dark/10">
   <div class="max-w-5xl p-3 mx-auto">
-    <h1>Lorem, ipsum dolor.</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, vel.</p>
+    <h1>{{ section2Title }}</h1>
+    <p>{{ section2Description }}</p>
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 pt-[50px] md:pt-[100px]"
     >
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="section2feature1Img" alt="" />
+      </div>
       <div class="w-full text-left">
-        <h5>Lorem ipsum dolor sit amet.</h5>
+        <h5>{{ section2feature1Title }}</h5>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, culpa.
-          Soluta tenetur quis quaerat in optio ipsam, rem incidunt magnam?
+          {{ section2feature1Description }}
         </p>
       </div>
       <div class="order-2 md:order-none w-full text-left">
-        <h5>Lorem ipsum dolor sit amet.</h5>
+        <h5>{{ section2feature2Title }}</h5>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, culpa.
-          Soluta tenetur quis quaerat in optio ipsam, rem incidunt magnam?
+          {{ section2feature2Description }}
         </p>
       </div>
       <div
         class="order-1 md:order-none w-full h-[200px] border border-dark rounded-md"
-      ></div>
+      >
+        <img [src]="section2feature2Img" alt="" />
+      </div>
 
-      <div class="w-full h-[200px] border border-dark rounded-md"></div>
+      <div class="w-full h-[200px] border border-dark rounded-md">
+        <img [src]="section2feature3Img" alt="" />
+      </div>
       <div class="w-full text-left">
-        <h5>Lorem ipsum dolor sit amet.</h5>
+        <h5>{{ section2feature3Img }}</h5>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, culpa.
-          Soluta tenetur quis quaerat in optio ipsam, rem incidunt magnam?
+          {{ section2feature3Description }}
         </p>
       </div>
     </div>
@@ -91,11 +85,8 @@
 </div>
 <div class="py-[100px] text-center">
   <div class="max-w-5xl p-3 mx-auto">
-    <h1 class>Lorem, ipsum dolor.</h1>
-    <p>
-      Lorem ipsum, I'm looking for a position that , dolor sit amet consectetur
-      adipisicing elit. Quasi, vel.
-    </p>
+    <h1 class>{{ section3Title }}</h1>
+    <p>{{ section3Description }}</p>
   </div>
 </div>
 
