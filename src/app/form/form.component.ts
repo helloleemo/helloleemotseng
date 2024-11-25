@@ -10,5 +10,4 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
   constructor(public MouseService: MouseService) {}
-
 }

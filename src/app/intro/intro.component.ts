@@ -38,7 +38,7 @@ export class IntroComponent {
   section2feature3Description: string = 'I have experience with the following technologies:';
   section2feature3Img: string = 'section2feature3Img';
 
-  section3Title: string = 'Requirements';
+  section3Title: string = 'Inquirement';
   section3Description: string = 'I have experience with the following technologies:';
 
 }   
