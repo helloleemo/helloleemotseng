@@ -22,7 +22,7 @@ export class CardsService {
         tag: 'All',
         name: 'Product',
         description: 'description1',
-        linkto: '',
+        linkto: '/template/resizer',
         img: 'https://picsum.photos/id/684/600/400',
         innerHtml: '<div class="bg-dark/10 min-w-full min-h-full rounded-lg">d</div>'
       }, {
