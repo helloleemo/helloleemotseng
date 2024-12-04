@@ -1,5 +1,25 @@
-<p>resizer works!</p>
+<as-split direction="horizontal" gutterSize="10">
+  <as-split-area [size]="leftSize">
+    <div
+      class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
+    >
+      <img
+        class="w-full h-full object-cover"
+        src="https://picsum.photos/id/112/1200/400"
+        alt=""
+      />
+    </div>
+  </as-split-area>
 
-<div class="topPanel bg-black h-[100px]"></div>
-<div class="resizer border-b-8"></div>
-<div class="bottomPanel bg-primary h-[100px]"></div>
+  <as-split-area id="rightSplitArea" [size]="rightSize">
+    <div
+      class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
+    >
+      <img
+        class="w-full h-full object-cover"
+        src="https://picsum.photos/id/112/1200/400?grayscale"
+        alt=""
+      />
+    </div>
+  </as-split-area>
+</as-split>

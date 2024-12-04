@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
-import { CarouselComponent } from '../shared/carousel/carousel.component';
+
 import { FormComponent } from '../form/form.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CarouselComponent, FormComponent, CommonModule],
+  imports: [FormComponent, CommonModule],
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {
-  greeting: string = `Hello, I'm LeeMo`;
+  greeting: string = `Quick Start`;
   description: string = `<p>Frontend Developer.</p>
     <p>I'm responsible for</p>`;
   image: string = '';
   section1Title: string = 'Less is more';
-  section1Description: string = '<p>I believe that less is more.</p> <p>I always try to make my code as simple as possible. I always try to make my code as simple as possible.</p>';
+  section1Description: string = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sequi ab voluptatum nostrum pariatur veniam laboriosam in nam, eum officia?</p>';
   section1Img: string = '';
   section1Description2: string = 'My goal is to make the web a better place.';
   img1: string = '';
