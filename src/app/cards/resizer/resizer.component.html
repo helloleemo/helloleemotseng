@@ -1,25 +1,29 @@
 <as-split direction="horizontal" gutterSize="10">
+  <!-- left start -->
   <as-split-area [size]="leftSize">
     <div
       class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/112/1200/400"
+        src="https://picsum.photos/id/100/1200/400"
         alt=""
       />
     </div>
   </as-split-area>
+  <!-- left end -->
 
+  <!-- right start -->
   <as-split-area id="rightSplitArea" [size]="rightSize">
     <div
       class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/112/1200/400?grayscale"
+        src="https://picsum.photos/id/100/1200/400?grayscale"
         alt=""
       />
     </div>
   </as-split-area>
+  <!-- right end -->
 </as-split>

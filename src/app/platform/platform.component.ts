@@ -5,8 +5,9 @@ import { MatRipple } from '@angular/material/core';
 import { MouseService } from '../services/mouse.service';
 import { CardsService } from '../services/cards.service';
 import { CardInterface } from '../services/cards.service';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { HeaderComponent } from '../header/header.component';
 
 
 
@@ -20,7 +21,7 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple, RouterLink],
+  imports: [CommonModule, MatRipple, RouterLink,HeaderComponent],
   templateUrl: './platform.component.html',
   animations: [
     trigger('hoverAnimation', [
@@ -59,28 +60,24 @@ export class PlatformComponent implements OnInit {
     {
       id: 5,
       name: "All",
-      description: "description1"
+      description: ""
     }, {
-      id: 1,
-      name: "Product",
-      description: "description1"
-    }, {
+      id: 4,
+      name: "Achivements",
+      description: ""
+    },{
       id: 2,
-      name: "Toolkit",
-      description: "description1"
-    }, {
+      name: "Website",
+      description: ""
+    },{
+      id: 1,
+      name: "Components",
+      description: ""
+    },{
       id: 3,
-      name: "Graphics",
-      description: "description1"
-    }, {
-      id: 4,
       name: "UIUX",
-      description: "description1"
-    }, {
-      id: 4,
-      name: "Challenge",
-      description: "description1"
-    }
+      description: ""
+    }, 
   ]
 
   // Cards list

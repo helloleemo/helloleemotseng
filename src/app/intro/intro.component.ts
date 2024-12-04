@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 import { FormComponent } from '../form/form.component';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [FormComponent, CommonModule],
+  imports: [FormComponent, CommonModule, HeaderComponent],
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {

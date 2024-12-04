@@ -4,6 +4,7 @@ export interface CardInterface {
   id: number;
   tag: string;
   name: string;
+  tags: string[];
   description: string;
   linkto: string;
   innerHtml: string;
@@ -19,16 +20,18 @@ export class CardsService {
     return [
       {
         id: 1,
-        tag: 'All',
-        name: 'Product',
-        description: 'description1',
+        tag: 'Components',
+        name: 'Resizer',
+        description: 'This is a resizer component. Use it to resize the inner content of the card.',
+        tags: ['Component', 'Tailwind'],
         linkto: '/template/resizer',
         img: 'https://picsum.photos/id/684/600/400',
         innerHtml: '<div class="bg-dark/10 min-w-full min-h-full rounded-lg">d</div>'
       }, {
         id: 2,
-        tag: 'Product',
+        tag: '',
         name: 'Product',
+        tags: ['All', 'Resizer'],
         linkto: 'https://www.google.com',
         img: '',
         description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -38,12 +41,11 @@ export class CardsService {
         id: 3,
         tag: 'Product',
         name: 'Product',
-        linkto: '',
+        tags: ['All', 'Resizer'],
+        linkto: 'https://www.google.com',
         img: '',
-
-        description: 'description1',
+        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         innerHtml: '<duv>testtest</div>'
-
       },
     ];
   }

@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="p-3 mx-auto pt-[100px]">
   <div class="tags flex space-x-2 flex-wrap pb-4">
     <div
@@ -35,12 +36,22 @@
       <div class="content w-full h-full">
         <div class="w-full h-full rounded-lg">
           <div
-            class="rounded-lg hoverText p-4 bg-dark/80 flex flex-col justify-between h-full"
+            class="rounded-lg hoverText p-5 bg-dark/80 flex flex-col justify-between h-full"
             [@hoverAnimation]="hoverStates[i] ? 'hover' : 'default'"
           >
-            <div>
-              <h1 class="text-2xl font-bold text-white/90">{{ item.name }}</h1>
-              <p class="text-sm text-white/70">{{ item.description }}</p>
+            <div class="flex flex-col">
+              <div class="tagsContainer flex gap-2">
+                <p
+                  *ngFor="let tag of item.tags"
+                  class="text-white/80 border rounded-full px-3 py-0 w-fit"
+                >
+                  <span>{{ tag }}</span>
+                </p>
+              </div>
+              <h1 class="text-2xl font-bold text-white/90 pt-3">
+                {{ item.name }}
+              </h1>
+              <p class="text-base text-white/70">{{ item.description }}</p>
             </div>
             <div class="flex justify-between">
               <div></div>

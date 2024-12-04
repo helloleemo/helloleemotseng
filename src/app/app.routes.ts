@@ -7,15 +7,12 @@ import { templateComponent } from './cards/template/template.component';
 
 export const routes: Routes = [
   { path: '', component: IntroComponent },
-  {
-    path: 'platform',
-    component: PlatformComponent,
-  },
-  { path: 'articles', component: ArticlesComponent },
-  {
-    path: 'template', component: templateComponent,
+  { path: 'intro', component: IntroComponent },
+  { path: 'platform', component: PlatformComponent },
+  { path: 'template', component: templateComponent,
     children: [
       { path: 'resizer', component: ResizerComponent },
     ]
-  }
+  },
+  { path: 'articles', component: ArticlesComponent },
 ];

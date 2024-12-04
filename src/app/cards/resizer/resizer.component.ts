@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
+import { FullPageBlurComponent } from '../../shared/full-page-blur/full-page-blur.component';
 
-// 替代類型定義（適用於某些版本不明確的情況）
-interface SplitGutterEvent {
-  gutterNum: number;
-  sizes: number[];
-}
 
 @Component({
   selector: 'app-resizer',
@@ -19,4 +15,12 @@ export class ResizerComponent {
   leftSize: number = 50;
   rightSize: number = 50;
 
+  animationState: 'blur' | 'clear' = 'blur';
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.animationState = 'clear';
+    }, 5000);
+ }
 }
+

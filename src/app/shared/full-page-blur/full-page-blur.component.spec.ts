@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArticlesComponent } from './articles.component';
+import { FullPageBlurComponent } from './full-page-blur.component';
 
-describe('ArticlesComponent', () => {
-  let component: ArticlesComponent;
-  let fixture: ComponentFixture<ArticlesComponent>;
+describe('FullPageBlurComponent', () => {
+  let component: FullPageBlurComponent;
+  let fixture: ComponentFixture<FullPageBlurComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ArticlesComponent]
+      imports: [FullPageBlurComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ArticlesComponent);
+    fixture = TestBed.createComponent(FullPageBlurComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,7 @@
 import { MouseService } from './../../services/mouse.service';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { HeaderComponent } from '../../header/header.component';
 
 interface ArticleItem {
   id: number;
@@ -18,9 +19,8 @@ interface ArticleTagsItem {
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './articles.component.html',
-  styleUrl: './articles.component.css'
 })
 export class ArticlesComponent {
 
