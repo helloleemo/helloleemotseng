@@ -34,7 +34,7 @@ export class CardsService {
         tag: 'Website',
         name: 'T3co Co-working Space',
         tags: ['Angular', 'Tailwind', 'Monitor', 'Material Design'],
-        linkto: '/template/monitor',
+        linkto: '/template/monitor/home-menu',
         hyperlink: '',
         img: '',
         description: 'Placed in the center of the screen, this monitor is a great way to display your content.',

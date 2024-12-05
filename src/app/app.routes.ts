@@ -9,6 +9,7 @@ import { SpaceComponent } from './cards/monitor/space/space.component';
 import { PrivateOfficeComponent } from './cards/monitor/space/private-office/private-office.component';
 import { HotDeskComponent } from './cards/monitor/space/hot-desk/hot-desk.component';
 import { OpenAreaComponent } from './cards/monitor/space/open-area/open-area.component';
+import { HomeMenuComponent } from './cards/monitor/monitor-content/home-menu/home-menu.component';
 
 export const routes: Routes = [
   { path: '', component: IntroComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
       { path: 'resizer', component: ResizerComponent },
       { path: 'monitor',component: MonitorComponent,
         children:[
+          {path:'home-menu',component:HomeMenuComponent},
           {path:'space',component:SpaceComponent},
           {path:'private-office',component:PrivateOfficeComponent},
           {path:'hot-desk',component:HotDeskComponent},

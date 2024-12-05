@@ -62,7 +62,11 @@ export class SpaceComponent implements OnInit {
       imgUrl: "/monitor/space/Meeting-Room-thumbnail.jpg",
     }
   ];
+
   constructor(private router: Router, private route: ActivatedRoute) {}
+
+
+  isHovered = false;
 
   ngOnInit(): void {
     // 監聽路由變化以判斷是否為子路徑

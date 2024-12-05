@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 import { templateComponent } from '../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,21 +17,20 @@ export class ResizerComponent {
   leftSize: number = 50;
   rightSize: number = 50;
 
-
-
   isShowed: boolean = true;
 
   OnInit(): void {
     this.isShowed = true;
   }
-
-  destroyed() {
+    destroyed() {
     this.isShowed = false;
   }
 
-
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    this.isShowed = false;
+  }
 
   animationState: 'blur' | 'clear' = 'blur';
 
 }
-

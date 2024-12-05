@@ -37,42 +37,39 @@ export class HomeMenuComponent {
   isOpened: boolean = false;
 
   showMenu() {
-    this.isOpened = !this.isOpened;
+    this.isOpened = true;
   }
 
-  hideMenu() {
-    this.isOpened = false;
-  }
 
   menuItems: MenuItems[] = [
     {
       name: 'space',
       imgUrl: '',
-      linkTo: `space`,
+      linkTo: `/template/monitor/space`,
       colSpan: 'col-span-4'
     },
     {
       name: 'plan',
       imgUrl: '',
-      linkTo: `plan`,
+      linkTo: `/template/monitor/plan`,
       colSpan: 'col-span-2'
     },
     {
       name: 'PARTNER',
       imgUrl: '',
-      linkTo: `partners-and-members`,
+      linkTo: `/template/monitor/partners-and-members`,
       colSpan: 'col-span-2'
     },
     {
       name: 'news',
       imgUrl: '',
-      linkTo: `news`,
+      linkTo: `/template/monitor/news`,
       colSpan: 'col-span-3'
     },
     {
       name: 'quiz',
       imgUrl: '',
-      linkTo: `quiz`,
+      linkTo: `/template/monitor/quiz`,
       colSpan: 'col-span-1'
     }
   ];
