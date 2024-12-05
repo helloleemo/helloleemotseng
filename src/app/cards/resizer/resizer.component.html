@@ -3,7 +3,18 @@
   <p class="text-2xl pl-2 font-medium">Back to platform</p>
 </app-template>
 
-<as-split direction="horizontal" gutterSize="10">
+<div
+  *ngIf="isShowed"
+  class="absolute drop-shadow-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-fit text-nowrap"
+>
+  <p
+    class="text-white/90 bg-gray-600/80 border border-gray-600 px-10 py-2 rounded-full md:text-3xl text-xl"
+  >
+    Drag the gutter
+  </p>
+</div>
+
+<as-split direction="horizontal" gutterSize="10" (click)="destroyed()">
   <!-- left start -->
   <as-split-area [size]="leftSize">
     <div
@@ -11,7 +22,7 @@
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/100/1200/400"
+        src="/img/resizer-colored.jpg"
         alt=""
       />
     </div>
@@ -25,7 +36,7 @@
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/100/1200/400?grayscale"
+        src="img/resizer-black-and-white.jpg"
         alt=""
       />
     </div>

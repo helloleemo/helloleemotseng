@@ -66,7 +66,11 @@
                 <p>View work</p>
               </button>
 
-              <a *ngIf="item.hyperlink !== ''" [href]="item.hyperlink">
+              <a
+                *ngIf="item.hyperlink !== ''"
+                [href]="item.hyperlink"
+                target="_blank"
+              >
                 <button
                   (mouseenter)="mouseService.togglePointer(true)"
                   (mouseleave)="mouseService.togglePointer(false)"
