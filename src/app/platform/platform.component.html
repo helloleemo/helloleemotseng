@@ -40,7 +40,7 @@
             [@hoverAnimation]="hoverStates[i] ? 'hover' : 'default'"
           >
             <div class="flex flex-col">
-              <div class="tagsContainer flex gap-2">
+              <div class="tagsContainer flex gap-2 flex-wrap">
                 <p
                   *ngFor="let tag of item.tags"
                   class="text-white/80 border rounded-full px-3 py-0 w-fit"
@@ -61,10 +61,22 @@
                 *ngIf="item.linkto !== ''"
                 mat-ripple
                 [routerLink]="item.linkto"
-                class="bg-primary hover:bg-primary/90 text-white px-10 py-1 rounded-full"
+                class="bg-primary hover:bg-primary/90 text-white px-10 py-1 rounded-full flex"
               >
-                View
+                <p>View work</p>
               </button>
+
+              <a *ngIf="item.hyperlink !== ''" [href]="item.hyperlink">
+                <button
+                  (mouseenter)="mouseService.togglePointer(true)"
+                  (mouseleave)="mouseService.togglePointer(false)"
+                  mat-ripple
+                  class="bg-primary hover:bg-primary/90 text-white px-10 py-1 rounded-full flex"
+                >
+                  <p>View</p>
+                  <mat-icon class="text-base">north_east</mat-icon>
+                </button>
+              </a>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         bgcolor: "#F9F9F9",
-        primary: "red",
+        primary: "#F37021",
         dark: "#3c3c3c",
       },
     },

@@ -1,12 +1,13 @@
 <div routerLink="/platform" class="absolute z-10">
-  <div class="content p-10 flex hover:scale-[1.05] transition-all">
-    <mat-icon class="text-2xl" [class]="backToPlateformStyle"
-      >arrow_back</mat-icon
-    >
-    <p class="text-2xl pl-2 font-medium" [class]="backToPlateformStyle">
-      Back to Plateform
-    </p>
+  <div
+    [class]="templateStyle"
+    class="content p-10 flex hover:scale-[1.05] transition-all"
+  >
+    <ng-content></ng-content>
   </div>
 </div>
 
 <router-outlet></router-outlet>
+
+<!-- <mat-icon class="text-2xl">arrow_back</mat-icon>
+    <p class="text-2xl pl-2 font-medium">Back to Plateform</p> -->

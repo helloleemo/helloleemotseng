@@ -1,0 +1,51 @@
+<!-- <video
+  (click)="showMenu()"
+  autoplay
+  muted
+  loop
+  class="absolute top-0 left-0 w-full h-full object-cover"
+  [src]="videoImg"
+></video> -->
+
+<div
+  (click)="showMenu()"
+  *ngIf="!isOpened"
+  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+>
+  <p
+    class="border rounded-sm bg-white/10 border-white p-10 w-full text-white text-2xl font-semibold"
+  >
+    Start Visit
+  </p>
+</div>
+<div class="logo absolute top-0 right-0 p-10">
+  <img class="sm:w-[150px] w-[0px]" [src]="logImg" alt="" />
+</div>
+
+<div
+  @showUpAnimation
+  *ngIf="isOpened"
+  (click)="hideMenu()"
+  class="menu grid grid-cols-4 gap-2 w-full px-3 absolute bottom-20 left-0 translate-x-1/2 -translate-y-1/2"
+>
+  <a
+    *ngFor="let item of menuItems"
+    matRipple
+    [matRippleColor]="rippleColor"
+    [matRippleRadius]="radius"
+    [routerLink]="item.linkTo"
+    [class]="
+      item.colSpan +
+      ' ' +
+      'min-h-[100px] border-2 border-white pressing-effect cursor-pointer rounded-sm overflow-hidden'
+    "
+  >
+    <div class="title">
+      <h4
+        class="text-white opacity-90 drop-shadow-md absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+      >
+        {{ item.name | uppercase }}
+      </h4>
+    </div>
+  </a>
+</div>

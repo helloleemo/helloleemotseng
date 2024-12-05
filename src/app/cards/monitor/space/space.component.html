@@ -1,0 +1,45 @@
+<div class="bg-white absolute top-0 left-0 w-[100vw] h-[100vh]"></div>
+<!-- 動態顯示選單或子內容 -->
+<div *ngIf="!isChildRouteActive">
+  <!-- 主選單內容 -->
+  <div
+    @showUpAnimation
+    class="menu fixed overflow-hidden grid grid-cols-2 grid-rows-3 gap-1 h-[100vh] w-full"
+  >
+    <a
+      @itemAnimation
+      *ngFor="let item of spaceItems"
+      matRipple
+      [matRippleColor]="rippleColor"
+      [matRippleRadius]="radius"
+      [routerLink]="item.linkTo"
+      [class]="
+        item.colSpan +
+        item.rowSpan +
+        ' ' +
+        'pressing-effect cursor-pointer rounded-sm relative overflow-hidden'
+      "
+    >
+      <div class="title">
+        <h1
+          class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        >
+          {{ item.name }}
+        </h1>
+        <div class="img absolute inset-0">
+          <img
+            class="w-full h-full object-cover transform transition active:scale-150"
+            [src]="item.imgUrl"
+            alt=""
+          />
+          <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- 當子路由啟用時顯示子頁內容 -->
+<div *ngIf="isChildRouteActive">
+  <router-outlet></router-outlet>
+</div>

@@ -8,6 +8,7 @@ import { CardInterface } from '../services/cards.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HeaderComponent } from '../header/header.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -21,7 +22,7 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple, RouterLink,HeaderComponent],
+  imports: [CommonModule, MatRipple, RouterLink,HeaderComponent,MatIconModule],
   templateUrl: './platform.component.html',
   animations: [
     trigger('hoverAnimation', [
