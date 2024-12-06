@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 export interface CardInterface {
   id: number;
-  tag: string;
+  tag: string[];
   name: string;
   tags: string[];
   description: string;
@@ -21,18 +21,18 @@ export class CardsService {
     return [
       {
         id: 1,
-        tag: 'Components',
+        tag: ['Components'],
         name: 'Resizer',
         description: 'This is a resizer component. Use it to resize the inner content of the card.',
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/resizer',
         hyperlink: '',
-        img: '',
+        img: 'img/resizer.png',
         innerHtml: '<div class="bg-dark/10 min-w-full min-h-full rounded-lg">d</div>'
       }, {
         id: 2,
-        tag: 'Website',
-        name: 'T3co Co-working Space',
+        tag: ['Website'],
+        name: 'T3co Co-working Space for Vertical Monitor',
         tags: ['Angular', 'Tailwind', 'Monitor', 'Material Design'],
         linkto: '/template/monitor/home-menu',
         hyperlink: '',
@@ -41,17 +41,17 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 3,
-        tag: 'Website',
-        name: 'Chair!',
-        tags: ['Vue', 'Commercial website', 'Vuetify'],
+        tag: ['Website','UIUX'],
+        name: 'Management system',
+        tags: ['JS', 'Management website'],
         linkto: '',
         hyperlink: 'https://www.google.com',
-        img: '',
+        img: 'img/Snipaste_2024-12-06_16-41-05.png',
         description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 3,
-        tag: 'Components',
+        tag: ['Components'],
         name: 'Searching for APT',
         tags: ['Vue', 'Commercial website', 'Vuetify'],
         linkto: 'https://www.google.com',
@@ -61,7 +61,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 4,
-        tag: 'Website',
+        tag: ['Website'],
         name: 'To do list',
         tags: ['Angular', 'Tool', 'Material Design'],
         linkto: 'https://www.google.com',
@@ -71,7 +71,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 5,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -81,7 +81,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 6,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -91,7 +91,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 7,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -101,7 +101,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 8,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -111,7 +111,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 9,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -121,7 +121,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 10,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -131,7 +131,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 11,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',
@@ -141,7 +141,7 @@ export class CardsService {
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 12,
-        tag: '',
+        tag: [''],
         name: '',
         tags: [''],
         linkto: '',

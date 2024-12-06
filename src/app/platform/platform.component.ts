@@ -22,7 +22,7 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple, RouterLink,HeaderComponent,MatIconModule],
+  imports: [CommonModule, MatRipple, RouterLink, HeaderComponent, MatIconModule],
   templateUrl: './platform.component.html',
   animations: [
     trigger('hoverAnimation', [
@@ -66,19 +66,19 @@ export class PlatformComponent implements OnInit {
       id: 4,
       name: "Achivements",
       description: ""
-    },{
+    }, {
       id: 2,
       name: "Website",
       description: ""
-    },{
+    }, {
       id: 1,
       name: "Components",
       description: ""
-    },{
+    }, {
       id: 3,
       name: "UIUX",
       description: ""
-    }, 
+    },
   ]
 
   // Cards list
@@ -94,15 +94,17 @@ export class PlatformComponent implements OnInit {
 
   initializeCardStates(): void {
     this.cardStates = new Array(this.cardList.length).fill('hidden');
+    this.hoverStates = new Array(this.cardList.length).fill(false);
   }
 
+
   animateAllCards(): void {
-  this.cardList.forEach((_, index) => {
-    setTimeout(() => {
-      this.cardStates[index] = 'visible';
-    }, index * 100); 
-  });
-}
+    this.cardList.forEach((_, index) => {
+      setTimeout(() => {
+        this.cardStates[index] = 'visible';
+      }, index * 100);
+    });
+  }
 
   selectedTag: string = "All";
 
@@ -110,32 +112,40 @@ export class PlatformComponent implements OnInit {
     this.selectedTag = tag;
     const filteredCards = this.filterCards();
     this.cardStates = new Array(filteredCards.length).fill('hidden');
-    // console.log(this.selectedTag);
+    this.hoverStates = new Array(filteredCards.length).fill(false);
 
     filteredCards.forEach((_, index) => {
-    setTimeout(() => {
-      this.cardStates[index] = 'visible';
-    }, index * 200); 
-  });
-
+      setTimeout(() => {
+        this.cardStates[index] = 'visible';
+      }, index * 200);
+    });
   }
+
 
   filterCards(): CardInterface[] {
     if (this.selectedTag === "All") {
       return this.cardList;
     }
-    return this.cardList.filter((card) => card.tag === this.selectedTag);
+    return this.cardList.filter((card) =>
+      Array.isArray(card.tag) && card.tag.includes(this.selectedTag)
+    );
   }
+
 
   hoverActive: boolean = false;
   hoverStates: boolean[] = [];
 
   showHover(index: number): void {
-    this.hoverStates[index] = true;
+    if (this.hoverStates[index] !== undefined) {
+      this.hoverStates[index] = true;
+    }
   }
 
   hideHover(index: number): void {
-    this.hoverStates[index] = false;
+    if (this.hoverStates[index] !== undefined) {
+      this.hoverStates[index] = false;
+    }
   }
+
 
 }
