@@ -24,7 +24,7 @@ export class EnlargeableImgGroupComponent {
   @Input() images: ImgItems[] = [];
 
 
-  rippleColor = "rgba(0, 0, 0, 0.3)";
+  rippleColor = "rgba(255, 255, 255, 0.3)";
   radius= 500;
 
   isEnlarged: boolean = false;

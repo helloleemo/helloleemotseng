@@ -1,5 +1,5 @@
 import { Component,  } from '@angular/core';
-import { EnlargeableImgGroupComponent } from '../../enlargeable-img-group/enlargeable-img-group.component';
+import { EnlargeableImgGroupComponent } from '../../../enlargeable-img-group/enlargeable-img-group.component';
 
 interface ImgItems {
     imgUrl: string,
@@ -40,24 +40,24 @@ export class PrivateOfficeComponent {
     span: "row-span-2",
   },
   {
-    imgUrl: "monitor/space/space/Private-office/P1103590.png",
+    imgUrl: "monitor/space/Private-office/P1103590.png",
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   },  {
-    imgUrl: "monitor/space/space/Private-office/S__219357186_0.jpg",
+    imgUrl: "monitor/space/Private-office/S__219357186_0.jpg",
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   }, {
-    imgUrl: "monitor/space/space/Private-office/P1103592-HDR.png",
+    imgUrl: "monitor/space/Private-office/P1103592-HDR.png",
     name: "",
     descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: "monitor/space/space/Private-office/P1103594-HDR.jpg",
+    imgUrl: "monitor/space/Private-office/P1103594-HDR.jpg",
     name: "",
     descrioption: "",
     span: "col-span-1",

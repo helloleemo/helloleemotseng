@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EnlargeableImgGroupComponent } from "../../enlargeable-img-group/enlargeable-img-group.component";
-import { ImgItems } from '../../interface/img-items';
+import { EnlargeableImgGroupComponent } from "../../../enlargeable-img-group/enlargeable-img-group.component";
+import { ImgItems } from '../../../interface/img-items';
 
 
 @Component({

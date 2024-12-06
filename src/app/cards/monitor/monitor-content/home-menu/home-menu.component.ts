@@ -45,33 +45,33 @@ export class HomeMenuComponent {
     {
       name: 'space',
       imgUrl: '',
-      linkTo: `/template/monitor/space`,
+      linkTo: "/template/monitor/space",
       colSpan: 'col-span-4'
     },
     {
       name: 'plan',
       imgUrl: '',
-      linkTo: `/template/monitor/plan`,
-      colSpan: 'col-span-2'
+      linkTo: "/template/monitor/plan",
+      colSpan: 'col-span-4'
     },
-    {
-      name: 'PARTNER',
-      imgUrl: '',
-      linkTo: `/template/monitor/partners-and-members`,
-      colSpan: 'col-span-2'
-    },
-    {
-      name: 'news',
-      imgUrl: '',
-      linkTo: `/template/monitor/news`,
-      colSpan: 'col-span-3'
-    },
-    {
-      name: 'quiz',
-      imgUrl: '',
-      linkTo: `/template/monitor/quiz`,
-      colSpan: 'col-span-1'
-    }
+    // {
+    //   name: 'PARTNER',
+    //   imgUrl: '',
+    //   linkTo: "/template/monitor/partners-and-members",
+    //   colSpan: 'col-span-2'
+    // },
+    // {
+    //   name: 'news',
+    //   imgUrl: '',
+    //   linkTo: "/template/monitor/news",
+    //   colSpan: 'col-span-2'
+    // },
+    // {
+    //   name: 'quiz',
+    //   imgUrl: '',
+    //   linkTo: "/template/monitor/quiz",
+    //   colSpan: 'col-span-1'
+    // }
   ];
 
 

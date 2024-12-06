@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
-import { itemAnimation, showUpAnimation } from '../animation';
+import { itemAnimation, showUpAnimation } from '../../animation';
 import { filter } from 'rxjs';
 // import { templateComponent } from '../../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -35,28 +35,28 @@ export class SpaceComponent implements OnInit {
   spaceItems: SpaceItems[] = [
     {
       name: 'Private Office',
-      linkTo: 'monitor/private-office',
+      linkTo: '/template/monitor/private-office',
       imgUrl: "/monitor/space/Private-office-thumbnail.png",
       colSpan: "",
       rowSpan: "row-span-2",
     },
     {
       name: 'Hot Desk',
-      linkTo: 'hot-desk',
+      linkTo: '/template/monitor/hot-desk',
       colSpan: "col-span-1",
       rowSpan: "",
       imgUrl: "/monitor/space/Hot-Desk-thunbnail.jpg",
     },
     {
       name: 'Open Area',
-      linkTo: 'open-area',
+      linkTo: '/template/monitor/open-area',
       colSpan: "col-span-1",
       rowSpan: "",
       imgUrl: "/monitor/space/Open-Area-thumbnail.png",
     },
     {
       name: 'Meeting Room',
-      linkTo: 'meeting-room',
+      linkTo: '/template/monitor/meeting-room',
       colSpan: "col-span-2",
       rowSpan: "",
       imgUrl: "/monitor/space/Meeting-Room-thumbnail.jpg",

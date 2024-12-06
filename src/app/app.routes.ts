@@ -5,11 +5,20 @@ import { ArticlesComponent } from './articles/articles/articles.component';
 import { ResizerComponent } from './cards/resizer/resizer.component';
 import { templateComponent } from './cards/template/template.component';
 import { MonitorComponent } from './cards/monitor/monitor.component';
-import { SpaceComponent } from './cards/monitor/space/space.component';
-import { PrivateOfficeComponent } from './cards/monitor/space/private-office/private-office.component';
-import { HotDeskComponent } from './cards/monitor/space/hot-desk/hot-desk.component';
-import { OpenAreaComponent } from './cards/monitor/space/open-area/open-area.component';
+
+
+
+
 import { HomeMenuComponent } from './cards/monitor/monitor-content/home-menu/home-menu.component';
+
+import { PlanComponent } from './cards/monitor/monitor-content/plan/plan.component';
+import { SpaceComponent } from './cards/monitor/monitor-content/space/space.component';
+import { PrivateOfficeComponent } from './cards/monitor/monitor-content/space/private-office/private-office.component';
+import { HotDeskComponent } from './cards/monitor/monitor-content/space/hot-desk/hot-desk.component';
+import { OpenAreaComponent } from './cards/monitor/monitor-content/space/open-area/open-area.component';
+import { MeetingRoomComponent } from './cards/monitor/monitor-content/space/meeting-room/meeting-room.component';
+
+
 
 export const routes: Routes = [
   { path: '', component: IntroComponent },
@@ -25,6 +34,8 @@ export const routes: Routes = [
           {path:'private-office',component:PrivateOfficeComponent},
           {path:'hot-desk',component:HotDeskComponent},
           {path:'open-area',component:OpenAreaComponent},
+          {path:'meeting-room',component:MeetingRoomComponent},
+          {path:'plan',component:PlanComponent},
         ]
        }
     ]

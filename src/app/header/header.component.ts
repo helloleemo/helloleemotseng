@@ -27,7 +27,7 @@ export class HeaderComponent {
 
   menuList: menuItems[] = [
     {
-      name: "LeeMo",
+      name: `<p class="block sm:hidden">LM</p><p class="hidden  sm:block">LeeMo</p>`,
       link: "/"
     }, {
       name: "Platform",
@@ -36,7 +36,11 @@ export class HeaderComponent {
       name: "Articles",
       link: "/articles"
     }, {
-      name: `<p class="flex items-center"><i class="material-icons">download</i>Download<p>`,
+      name: `
+        <div class="flex items-center">
+          <i class="material-icons ">download</i>
+          <p class="sm:block hidden">Download<p>
+        </div>`,
       link: "/"
     }
   ]

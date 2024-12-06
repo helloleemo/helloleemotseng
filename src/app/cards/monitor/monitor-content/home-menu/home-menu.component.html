@@ -2,36 +2,37 @@
   autoplay
   muted
   loop
-  class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+  class="absolute top-0 left-0 w-full h-[100vh] object-cover -z-10 overflow-hidden"
   [src]="videoImg"
 ></video>
+<div class="relative w-[100vw] h-[100vh]">
+  <div
+    @showUpAnimation
+    class="menu grid grid-cols-4 gap-2 w-full px-5 absolute translate-x-1/2 bottom-20 z-10"
+  >
+    <a
+      *ngFor="let item of menuItems"
+      matRipple
+      [matRippleColor]="rippleColor"
+      [matRippleRadius]="radius"
+      [routerLink]="item.linkTo"
+      [class]="
+        item.colSpan +
+        ' ' +
+        'min-h-[100px] border-2 border-white cursor-pointer rounded-sm overflow-hidden bg-white/30'
+      "
+    >
+      <div class="title">
+        <h4
+          class="text-white opacity-90 drop-shadow-md absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        >
+          {{ item.name | uppercase }}
+        </h4>
+      </div>
+    </a>
+  </div>
+</div>
 
 <div class="logo absolute top-0 right-0 p-10">
   <img class="sm:w-[150px] w-[0px]" [src]="logImg" alt="" />
-</div>
-
-<div
-  @showUpAnimation
-  class="menu grid grid-cols-4 gap-2 w-full px-3 absolute bottom-20 left-0 translate-x-1/2 -translate-y-1/2 z-10"
->
-  <a
-    *ngFor="let item of menuItems"
-    matRipple
-    [matRippleColor]="rippleColor"
-    [matRippleRadius]="radius"
-    [routerLink]="item.linkTo"
-    [class]="
-      item.colSpan +
-      ' ' +
-      'min-h-[100px] border-2 border-white pressing-effect cursor-pointer rounded-sm overflow-hidden bg-white/20'
-    "
-  >
-    <div class="title">
-      <h4
-        class="text-white opacity-90 drop-shadow-md absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
-      >
-        {{ item.name | uppercase }}
-      </h4>
-    </div>
-  </a>
 </div>

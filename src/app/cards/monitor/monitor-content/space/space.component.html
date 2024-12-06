@@ -1,4 +1,4 @@
-<div class="bg-bgcolor absolute top-0 left-0 w-[100vw] h-[100vh]"></div>
+<!-- <div class="bg-bgcolor absolute top-0 left-0 w-[100vw] h-[100vh]"></div> -->
 <!-- 動態顯示選單或子內容 -->
 <div *ngIf="!isChildRouteActive">
   <!-- 主選單內容 -->
@@ -21,10 +21,6 @@
         'pressing-effect cursor-pointer rounded-sm relative overflow-hidden'
       "
     >
-      <div
-        *ngIf="isHovered"
-        class="alpha absolute top-0 left-0 w-full h-full bg-black/20 transition-colors z-20"
-      ></div>
       <div class="title">
         <h1
           class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
@@ -45,6 +41,6 @@
 </div>
 
 <!-- 當子路由啟用時顯示子頁內容 -->
-<div *ngIf="isChildRouteActive">
+<!-- <div *ngIf="isChildRouteActive">
   <router-outlet></router-outlet>
-</div>
+</div> -->

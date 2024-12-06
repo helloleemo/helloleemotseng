@@ -22,7 +22,7 @@ export class ResizerComponent {
   OnInit(): void {
     this.isShowed = true;
   }
-    destroyed() {
+  destroyed() {
     this.isShowed = false;
   }
 

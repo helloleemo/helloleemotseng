@@ -1,0 +1,93 @@
+<div class="flex flex-col sm:flex-row gap-1">
+  <div *ngFor="let item of plans" class="plans">
+    <div
+      @itemAnimation
+      (click)="openPlanItem(item)"
+      matRipple
+      [matRippleColor]="rippleColor"
+      [matRippleCentered]="centered"
+      [matRippleRadius]="radius"
+      class="plan w-fit relative rounded-sm overflow-hidden cursor-pointer"
+    >
+      <div
+        class="text text-center drop-shadow-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+      >
+        <p class="text-3xl text-white font-bold w-full">{{ item.name }}</p>
+        <p class="text-white mx-auto text-lg pt-5 w-full">
+          {{ item.description }}
+        </p>
+      </div>
+      <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+      <div class="imgbox rounded-sm">
+        <img
+          class="w-[100vw] sm:h-[100vh] h-[33.33333333333333vh] object-cover"
+          [src]="item.imgUrl"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ------------- -->
+<!-- View the plan -->
+<!-- ------------- -->
+
+<div @viewPlanItemAnimation *ngIf="isOpen">
+  <div
+    class="absolute top-0 left-0 bg-alpha bg-black/50 h-[100vh] w-[100vw]"
+  ></div>
+  <div
+    class="absolute py-10 rounded-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20"
+  >
+    <mat-icon
+      (click)="closePlanItem()"
+      class="closeBtn text-[20px] text-secondary/30 absolute top-[20px] right-[20px] cursor-pointer"
+      style="width: 20px; height: 20px"
+      >close</mat-icon
+    >
+    <div class="planContent flex flex-col space-y-5 w-fit">
+      <div class="title flex items-end space-x-5">
+        <h2 class="border-b-[5px] pb-2 border-primary">
+          {{ selectedPlanItem?.name }}
+        </h2>
+        <p
+          class="text-base sm:text-xl text-secondary/50 pb-[13px] sm:block hidden"
+        >
+          {{ selectedPlanItem?.price }}
+        </p>
+      </div>
+      <p class="text-base sm:text-xl text-secondary/80">
+        {{ selectedPlanItem?.description }}
+      </p>
+      <div *ngIf="selectedPlanItem" class="icons flex space-x-1 px-2 py-5">
+        <div
+          *ngFor="let item of selectedPlanItem.icons"
+          class="frame flex flex-col flex-1 space-y-1 items-center border border-primary p-5 rounded-xl"
+        >
+          <mat-icon
+            class="text-primary text-[50px]"
+            style="width: 50px; height: 50px"
+            >{{ item.name }}</mat-icon
+          >
+          <p class="text-secondary/50 text-[16px] text-center">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+      <ul *ngIf="selectedPlanItem" class="space-y-1">
+        <li
+          *ngFor="let item of selectedPlanItem.features"
+          class="flex space-x-1 items-center"
+        >
+          <mat-icon
+            class="text-primary text-[14px] min-w-[14px]"
+            style="width: 14px; height: 14px"
+            >task_alt</mat-icon
+          >
+          <p class="text-base text-secondary/70">{{ item }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

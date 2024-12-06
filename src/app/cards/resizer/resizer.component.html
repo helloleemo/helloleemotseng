@@ -4,12 +4,10 @@
 </app-template>
 
 <div
-  *ngIf="!isShowed"
-  class="absolute drop-shadow-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-fit text-nowrap"
+  *ngIf="isShowed"
+  class="absolute transition-all drop-shadow-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-fit text-nowrap"
 >
-  <p
-    class="text-white/90 bg-gray-600/80 border border-gray-600 px-10 py-2 rounded-full md:text-3xl text-xl"
-  >
+  <p class="text-gray-600 px-10 py-2 rounded-full md:text-3xl text-xl">
     Drag the gutter
   </p>
 </div>
