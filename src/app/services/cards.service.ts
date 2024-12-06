@@ -42,12 +42,12 @@ export class CardsService {
       }, {
         id: 3,
         tag: ['Website','UIUX'],
-        name: 'Management system',
-        tags: ['JS', 'Management website'],
-        linkto: '',
-        hyperlink: 'https://www.google.com',
-        img: 'img/Snipaste_2024-12-06_16-41-05.png',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        name: 'Air Cargo Tracking System',
+        tags: ['Angular', 'Tailwind'],
+        linkto: '/template/tracking-system/login',
+        hyperlink: '',
+        img: '',
+        description: '',
         innerHtml: '<duv>testtest</div>'
       }, {
         id: 3,
