@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import { itemAnimation, showUpAnimation } from '../../animation';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { SubmenuComponent } from '../../submenu/submenu.component';
 // import { NgModel } from '@angular/forms';
 
 

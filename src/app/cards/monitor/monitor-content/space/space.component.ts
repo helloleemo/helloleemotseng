@@ -7,6 +7,7 @@ import { itemAnimation, showUpAnimation } from '../../animation';
 import { filter } from 'rxjs';
 // import { templateComponent } from '../../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SubmenuComponent } from '../../submenu/submenu.component';
 
 interface SpaceItems {
   name: string;
@@ -19,7 +20,7 @@ interface SpaceItems {
 @Component({
   selector: 'app-space',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule, SubmenuComponent],
   templateUrl: './space.component.html',
   animations: [showUpAnimation,itemAnimation]
 })
