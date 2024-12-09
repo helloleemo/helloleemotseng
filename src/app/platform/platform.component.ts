@@ -78,6 +78,10 @@ export class PlatformComponent implements OnInit {
       id: 3,
       name: "UIUX",
       description: ""
+    }, {
+      id: 3,
+      name: "Product",
+      description: ""
     },
   ]
 

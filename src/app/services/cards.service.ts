@@ -28,57 +28,57 @@ export class CardsService {
         linkto: '/template/resizer',
         hyperlink: '',
         img: 'resizer/resizer.png',
-        innerHtml: '<div class="bg-dark/10 min-w-full min-h-full rounded-lg">d</div>'
+        innerHtml: '<div class="text-white ">lifhwilafhls</div>'
       }, {
         id: 2,
         tag: ['Website'],
         name: 'T3co Co-working Space for Vertical Monitor',
-        tags: ['Angular', 'Tailwind', 'Monitor', 'Material Design'],
+        tags: ['Angular18', 'Tailwind', 'Monitor', 'Material Design UI'],
         linkto: '/template/monitor/home-menu',
         hyperlink: '',
         img: 'monitor/monitor.png',
         description: 'Placed in the center of the screen, this monitor is a great way to display your content.',
-        innerHtml: '<duv>testtest</div>'
+        innerHtml: ''
       }, {
         id: 3,
-        tag: ['Website','UIUX'],
-        name: 'Air Cargo Tracking System',
+        tag: ['APP','UIUX'],
+        name: '2024 Annual Conference APP',
         tags: ['Angular', 'Tailwind'],
         linkto: '/template/tracking-system/login',
         hyperlink: '',
-        img: '',
+        img: 'platform/ui-annual.png',
         description: '',
-        innerHtml: '<duv>testtest</div>'
+        innerHtml: ''
       }, {
         id: 3,
-        tag: ['Components'],
-        name: 'Searching for APT',
-        tags: ['Vue', 'Commercial website', 'Vuetify'],
-        linkto: 'https://www.google.com',
+        tag: ['UIUX'],
+        name: 'Rehabilitation application',
+        tags: ['User Reasearch', 'Wireframe'],
+        linkto: '',
         hyperlink: '',
-        img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        img: 'platform/ui-aifree.png',
+        description: '',
+        innerHtml: ''
       }, {
         id: 4,
         tag: ['Website'],
-        name: 'To do list',
-        tags: ['Angular', 'Tool', 'Material Design'],
+        name: 'Shipment Tracking System',
+        tags: ['Angular18','Material Design UI','UIUX'],
         linkto: 'https://www.google.com',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 5,
-        tag: [''],
+        tag: ['Achivements'],
         name: '',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        img: 'platform/award01.png',
+        description: '',
+        innerHtml: '<duv></div>'
       }, {
         id: 6,
         tag: [''],
@@ -87,8 +87,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 7,
         tag: [''],
@@ -97,8 +97,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 8,
         tag: [''],
@@ -107,8 +107,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 9,
         tag: [''],
@@ -117,8 +117,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 10,
         tag: [''],
@@ -127,8 +127,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 11,
         tag: [''],
@@ -137,8 +137,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }, {
         id: 12,
         tag: [''],
@@ -147,8 +147,8 @@ export class CardsService {
         linkto: '',
         hyperlink: '',
         img: '',
-        description: 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        innerHtml: '<duv>testtest</div>'
+        description: '',
+        innerHtml: ''
       }
     ];
   }
