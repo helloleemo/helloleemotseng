@@ -3,8 +3,8 @@
   <p class="text-2xl pl-2 font-medium">Back to platform</p>
 </app-template>
 
+@if (isShowed) {
 <div
-  *ngIf="isShowed"
   class="fixed bottom-10 sm:top-0 sm:right-10 flex flex-col sm:flex-row justify-center gap-2 w-full sm:w-[350px] h-fit p-10"
 >
   <p
@@ -14,33 +14,40 @@
     Please drag the gutter
   </p>
 </div>
-
-<as-split direction="horizontal" gutterSize="10" (click)="destroyed()">
-  <!-- left start -->
-  <as-split-area [size]="leftSize">
-    <div
-      class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
-    >
-      <img
-        class="w-full h-full object-cover"
-        src="resizer/resizer-colored.png"
-        alt=""
-      />
-    </div>
-  </as-split-area>
-  <!-- left end -->
-
-  <!-- right start -->
-  <as-split-area id="rightSplitArea" [size]="rightSize">
-    <div
-      class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
-    >
-      <img
-        class="w-full h-full object-cover"
-        src="resizer/resizer-greyscale.png"
-        alt=""
-      />
-    </div>
-  </as-split-area>
-  <!-- right end -->
-</as-split>
+}
+<!-- Spinner -->
+<div
+  *ngIf="isLoading; else content"
+  class="flex justify-center items-center w-[100vw] h-[100vh]"
+>
+  <mat-spinner active-indicator-color="#555" diameter="50"></mat-spinner>
+</div>
+<ng-template #content>
+  <div class="w-full h-full">
+    <as-split direction="horizontal" gutterSize="10" (click)="destroyed()">
+      <!-- Left Panel -->
+      <as-split-area [size]="leftSize">
+        <div
+          class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
+        >
+          <img
+            class="w-full h-full object-cover"
+            src="resizer/resizer-colored.png"
+            alt=""
+          />
+        </div>
+      </as-split-area>
+      <!-- Right Panel -->
+      <as-split-area id="rightSplitArea" [size]="rightSize">
+        <div
+          class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
+        >
+          <img
+            class="w-full h-full object-cover"
+            src="resizer/resizer-greyscale.png"
+            alt=""
+          />
+        </div>
+      </as-split-area>
+    </as-split></div
+></ng-template>
