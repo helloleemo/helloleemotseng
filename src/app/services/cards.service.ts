@@ -27,7 +27,7 @@ export class CardsService {
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/resizer',
         hyperlink: '',
-        img: 'img/resizer.png',
+        img: 'resizer/resizer.png',
         innerHtml: '<div class="bg-dark/10 min-w-full min-h-full rounded-lg">d</div>'
       }, {
         id: 2,
@@ -36,7 +36,7 @@ export class CardsService {
         tags: ['Angular', 'Tailwind', 'Monitor', 'Material Design'],
         linkto: '/template/monitor/home-menu',
         hyperlink: '',
-        img: '',
+        img: 'monitor/monitor.png',
         description: 'Placed in the center of the screen, this monitor is a great way to display your content.',
         innerHtml: '<duv>testtest</div>'
       }, {

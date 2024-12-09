@@ -26,7 +26,7 @@ export class ResizerComponent {
     this.isShowed = false;
   }
 
-  @HostListener('document:click', ['$event'])
+  @HostListener('document:mousedown', ['$event'])
   onDocumentClick(event: MouseEvent): void {
     this.isShowed = false;
   }

@@ -1,14 +1,17 @@
-<app-template [templateStyle]="'text-dark/90'">
+<app-template [templateStyle]="'text-white'">
   <mat-icon class="text-2xl">arrow_back</mat-icon>
   <p class="text-2xl pl-2 font-medium">Back to platform</p>
 </app-template>
 
 <div
   *ngIf="isShowed"
-  class="absolute transition-all drop-shadow-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-fit text-nowrap"
+  class="fixed bottom-10 sm:top-0 sm:right-10 flex flex-col sm:flex-row justify-center gap-2 w-full sm:w-[350px] h-fit p-10"
 >
-  <p class="text-gray-600 px-10 py-2 rounded-full md:text-3xl text-xl">
-    Drag the gutter
+  <p
+    routerLink="/template/monitor/space"
+    class="text-center text-white/50 font-semibold text-xl px-10 w-full text-nowrap"
+  >
+    Please drag the gutter
   </p>
 </div>
 
@@ -20,10 +23,9 @@
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/101/600/400"
+        src="resizer/resizer-colored.png"
         alt=""
       />
-      <!-- <img src="https://picsum.photos/100/600/400" alt="" /> -->
     </div>
   </as-split-area>
   <!-- left end -->
@@ -35,7 +37,7 @@
     >
       <img
         class="w-full h-full object-cover"
-        src="https://picsum.photos/id/101/600/400?grayscale"
+        src="resizer/resizer-greyscale.png"
         alt=""
       />
     </div>

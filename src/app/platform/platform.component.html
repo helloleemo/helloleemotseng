@@ -17,7 +17,7 @@
       <p>{{ tag.name }}</p>
     </div>
   </div>
-  <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+  <div class="grid gap-5 sm:grid-cols-1 xl:grid-cols-2">
     <div
       *ngFor="let item of filterCards(); let i = index"
       [@cardAnimation]="cardStates[i]"
@@ -36,6 +36,7 @@
       <div class="content w-full h-full">
         <div class="w-full h-full rounded-lg">
           <div
+            *ngIf="hoverStates[i]"
             class="rounded-lg hoverText hover:bg-dark/70 transition-all duration-300 p-5 flex flex-col justify-between h-full"
           >
             <div class="flex flex-col">

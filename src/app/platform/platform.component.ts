@@ -102,7 +102,7 @@ export class PlatformComponent implements OnInit {
     this.cardList.forEach((_, index) => {
       setTimeout(() => {
         this.cardStates[index] = 'visible';
-      }, index * 100);
+      }, index * 200);
     });
   }
 
@@ -146,6 +146,4 @@ export class PlatformComponent implements OnInit {
       this.hoverStates[index] = false;
     }
   }
-
-
 }
