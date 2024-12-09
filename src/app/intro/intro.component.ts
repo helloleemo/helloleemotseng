@@ -7,7 +7,7 @@ import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [FormComponent, CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {
