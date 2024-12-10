@@ -82,6 +82,10 @@ export class PlatformComponent implements OnInit {
       id: 3,
       name: "Product",
       description: ""
+    },{
+      id: 3,
+      name: "Graphics",
+      description: ""
     },
   ]
 

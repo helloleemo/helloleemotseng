@@ -23,12 +23,12 @@ export class CardsService {
         id: 1,
         tag: ['Components'],
         name: 'Resizer',
-        description: 'This is a resizer component. Use it to resize the inner content of the card.',
+        description: 'This is a resizer component. <br/> Use it to resize the inner content of the card.',
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/resizer',
         hyperlink: '',
         img: 'resizer/resizer.png',
-        innerHtml: '<div class="text-white ">lifhwilafhls</div>'
+        innerHtml: ``
       }, {
         id: 2,
         tag: ['Website'],
@@ -36,7 +36,7 @@ export class CardsService {
         tags: ['Angular18', 'Tailwind', 'Monitor', 'Material Design UI'],
         linkto: '/template/monitor/home-menu',
         hyperlink: '',
-        img: 'monitor/monitor.png',
+        img: 'platform/website-2.png',
         description: 'Placed in the center of the screen, this monitor is a great way to display your content.',
         innerHtml: ''
       }, {
@@ -64,7 +64,7 @@ export class CardsService {
         tag: ['Website'],
         name: 'Shipment Tracking System',
         tags: ['Angular18','Material Design UI','UIUX'],
-        linkto: 'https://www.google.com',
+        linkto: '',
         hyperlink: '',
         img: '',
         description: '',
@@ -72,81 +72,189 @@ export class CardsService {
       }, {
         id: 5,
         tag: ['Achivements'],
-        name: '',
+        name: '育秀盃金獎',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: 'platform/award01.png',
+        img: 'platform/achievement-1.png',
         description: '',
-        innerHtml: '<duv></div>'
+        innerHtml: `<div class="absolute right-10 top-10">
+        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        </div>`
       }, {
         id: 6,
-        tag: [''],
-        name: '',
+        tag: ['Achivements'],
+        name: '史丹佛入圍',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/achievement-2.png',
         description: '',
-        innerHtml: ''
+        innerHtml: `<div class="absolute right-10 top-10">
+        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        </div>`
       }, {
         id: 7,
-        tag: [''],
-        name: '',
+        tag: ['Achivements'],
+        name: 'SAKURA佳作',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/achievement-3.png',
         description: '',
-        innerHtml: ''
+        innerHtml: `<div class="absolute right-10 top-10">
+        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        </div>`
       }, {
         id: 8,
-        tag: [''],
-        name: '',
+        tag: ['Graphics'],
+        name: 'Banner',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/graphics-1.png',
         description: '',
         innerHtml: ''
       }, {
         id: 9,
-        tag: [''],
-        name: '',
+        tag: ['Graphics'],
+        name: '魚',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/graphics-2.png',
         description: '',
         innerHtml: ''
       }, {
         id: 10,
-        tag: [''],
-        name: '',
+        tag: ['Graphics'],
+        name: '麻醉團隊',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/graphics-3.png',
         description: '',
         innerHtml: ''
       }, {
         id: 11,
-        tag: [''],
-        name: '',
+        tag: ['Graphics'],
+        name: 'Linkoo',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/graphics-5.png',
         description: '',
         innerHtml: ''
       }, {
         id: 12,
-        tag: [''],
-        name: '',
+        tag: ['Graphics'],
+        name: '衛教',
         tags: [''],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/graphics-6.png',
+        description: '',
+        innerHtml: ''
+      }, {
+        id: 10,
+        tag: ['Graphics'],
+        name: '梅好將來',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/graphics-7.png',
+        description: '',
+        innerHtml: ''
+      }, {
+        id: 10,
+        tag: ['Graphics'],
+        name: '國文課本',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/graphics-books.png',
+        description: '',
+        innerHtml: ''
+      }, {
+        id: 10,
+        tag: ['Graphics'],
+        name: '梅好將來',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/graphics-chiang.png',
+        description: '',
+        innerHtml: ''
+      }, {
+        id: 10,
+        tag: ['Product'],
+        name: '寶寶握把',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/product-baby-handle.png',
+        description: '',
+        innerHtml: ''
+      },{
+        id: 10,
+        tag: ['Product'],
+        name: '構音障礙',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/UX-article.png',
+        description: '',
+        innerHtml: ''
+      },{
+        id: 10,
+        tag: ['Product'],
+        name: '穩足',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/穩足DEMO.mp4',
+        description: '',
+        innerHtml: ''
+      },{
+        id: 10,
+        tag: ['Product'],
+        name: 'Ready to shine',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/ReadytoShine-video.mp4',
+        description: '',
+        innerHtml: ''
+      },{
+        id: 10,
+        tag: ['Achivements'],
+        name: '家具',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/achievement-4.png',
+        description: '',
+        innerHtml: `<div class="absolute right-10 top-10">
+        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        </div>`
+      },{
+        id: 10,
+        tag: ['Website'],
+        name: '珍奇椅',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/website-1.png',
+        description: '',
+        innerHtml: ''
+      },{
+        id: 10,
+        tag: ['UIUX'],
+        name: 'DElpot',
+        tags: [''],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/ui-delpot.png',
         description: '',
         innerHtml: ''
       }
