@@ -41,10 +41,10 @@ export class CardsService {
         innerHtml: ''
       }, {
         id: 3,
-        tag: ['APP','UIUX'],
+        tag: ['UIUX'],
         name: '2024 Annual Conference APP',
-        tags: ['Angular', 'Tailwind'],
-        linkto: '/template/tracking-system/login',
+        tags: ['User Interface', 'Figma'],
+        linkto: '',
         hyperlink: '',
         img: 'platform/ui-annual.png',
         description: '',
@@ -53,7 +53,7 @@ export class CardsService {
         id: 3,
         tag: ['UIUX'],
         name: 'Rehabilitation application',
-        tags: ['User Reasearch', 'Wireframe'],
+        tags: ['User Reasearch','AI Detection','Medical Device'],
         linkto: '',
         hyperlink: '',
         img: 'platform/ui-aifree.png',

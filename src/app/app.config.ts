@@ -6,9 +6,6 @@ import { provideHttpClient } from '@angular/common/http';
 import { MouseService } from './services/mouse.service';
 
 
-
-
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
