@@ -40,9 +40,9 @@ interface tagItems {
 })
 export class PlatformComponent implements OnInit {
   title = 'platform';
+  cardsService = inject(CardsService);
   mouseService = inject(MouseService);
   http = inject(HttpClient);
-  cardsService = inject(CardsService);
   cardStates: string[] = [];
 
   // hover state
@@ -98,6 +98,7 @@ export class PlatformComponent implements OnInit {
     this.initializeCardStates();
     this.animateAllCards();
     window.scrollTo(0, 0); 
+
 
   }
 
