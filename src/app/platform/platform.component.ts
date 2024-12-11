@@ -97,6 +97,7 @@ export class PlatformComponent implements OnInit {
     this.cardList = this.cardsService.cardsList();
     this.initializeCardStates();
     this.animateAllCards();
+    window.scrollTo(0, 0); 
 
   }
 
@@ -154,4 +155,7 @@ export class PlatformComponent implements OnInit {
       this.hoverStates[index] = false;
     }
   }
+
+
+
 }

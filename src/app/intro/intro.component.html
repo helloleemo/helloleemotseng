@@ -1,19 +1,19 @@
 <app-header></app-header>
 <div class="max-w-5xl p-3 mx-auto pt-[100px]">
   <h1>{{ greeting }}</h1>
-  <div class="pb-[50px]" [innerHTML]="description"></div>
+  <div class="pb-[50px] text-dark/80 text-lg" [innerHTML]="description"></div>
 </div>
 
 <div class="border border-transparent border-b-dark mt-[100px] mb-[50px]"></div>
 <div class="max-w-5xl p-3 mx-auto">
   <h1>{{ section1Title }}</h1>
-  <div [innerHTML]="section1Description"></div>
+  <div class="text-dark/80 text-lg" [innerHTML]="section1Description"></div>
   <div class="py-[20px]">
-    <div class="imgBox my-3 border border-dark rounded-md h-[200px]">
+    <div class="imgBox my-3 border border-dark/80 rounded-md h-[200px]">
       <img [src]="section1Img" alt="" />
     </div>
     <div class="content my-3">
-      <p class="text-justify font-light leading-relaxed text-dark/80">
+      <p class="text-dark/80 text-lg text-justify leading-relaxed text-dark/80">
         {{ section1Description2 }}
       </p>
     </div>
@@ -30,60 +30,68 @@
       <div class="w-full col-span-2 h-[200px] border border-dark rounded-md">
         <img [src]="img4" alt="" />
       </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
-        <img [src]="img5" alt="" />
-      </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
-        <img [src]="img6" alt="" />
-      </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
-        <img [src]="img7" alt="" />
-      </div>
     </div>
   </div>
 </div>
 <div class="mt-[100px] py-[100px] text-center bg-dark/10">
   <div class="max-w-5xl p-3 mx-auto">
     <h1>Skills</h1>
-    <p></p>
+    <p class="text-dark/80 text-lg">
+      In my work, I have the following qualities:
+    </p>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 pt-[50px] md:pt-[100px]"
+      class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 pt-[20px] md:pt-[50px]"
     >
-      <div class="w-full h-[200px] border border-dark rounded-md">
+      <div class="w-full h-[250px] border border-dark rounded-md">
         <img src="" alt="" />
       </div>
       <div class="w-full text-left">
-        <h5>產品思維</h5>
-        <p>
-          從學習到設計、從設計到實體、從實體到使用，科技日新月異但人性依舊，我們需要
+        <h5 class="text-2xl pb-2">Design Thinking</h5>
+        <p class="text-dark/80 text-lg">
+          Every product process from understanding to design, from design to
+          realization, and from realization to application. With the rapid
+          advancement of technology, we continuously evaluate feasibility and
+          learn new techniques throughout project development, trying to meet
+          contemporary needs as much as possible.
         </p>
       </div>
       <div class="order-2 md:order-none w-full text-left">
-        <h5>跨領域</h5>
-        <p>
-          我永遠尊重每個領域裡所有專業，而我也同樣希望自己能在這個日新月異的時代裡，保持著學習者的狀態。除了
+        <h5 class="text-2xl pb-2">Cross-functional collaboration</h5>
+        <p class="text-dark/80 text-lg">
+          Each field has its unique expertise. Through cross-functional
+          collaboration, I am able to learn from others within projects, making
+          the outcomes more comprehensive and complete.
         </p>
       </div>
       <div
-        class="order-1 md:order-none w-full h-[200px] border border-dark rounded-md"
+        class="order-1 md:order-none w-full h-[250px] border border-dark rounded-md"
       >
         <img alt="" />
       </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
+      <div class="w-full h-[250px] border border-dark rounded-md">
         <img alt="" />
       </div>
       <div class="w-full text-left">
-        <h5>專案導向</h5>
-        <p></p>
+        <h5 class="text-2xl pb-2">Project-Oriented Approach</h5>
+        <p class="text-dark/80 text-lg">
+          This is my preferred way of working: focusing on the target of a
+          project. This approach allows me to draw analogies and gain a broader
+          understanding of the integration between technology and results during
+          project execution.
+        </p>
       </div>
     </div>
   </div>
 </div>
-<div class="py-[100px] text-center">
-  <div class="max-w-5xl p-3 mx-auto">
-    <h1 class></h1>
-    <p></p>
-    <div class="btn border">Gallery</div>
+<div class="pt-[150px] pb-[200px] text-center">
+  <div class="max-w-5xl p-3 mx-auto flex flex-col justify-center">
+    <p class="pb-5 text-xl">See More...</p>
+    <a
+      matRipple
+      class="btn-outline hover:bg-dark/90 mx-auto bg-dark text-white w-fit py-3 px-10 rounded-full"
+      routerLink="/platform"
+      ><div class="text-xl">View Platform</div></a
+    >
   </div>
 </div>
 

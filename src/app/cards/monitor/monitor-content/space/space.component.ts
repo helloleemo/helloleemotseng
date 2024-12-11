@@ -20,7 +20,7 @@ interface SpaceItems {
 @Component({
   selector: 'app-space',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule, SubmenuComponent],
+  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule],
   templateUrl: './space.component.html',
   animations: [showUpAnimation,itemAnimation]
 })
