@@ -1,58 +1,37 @@
 import { Routes } from '@angular/router';
-import { PlatformComponent } from './platform/platform.component';
-import { IntroComponent } from './intro/intro.component';
-import { ArticlesComponent } from './articles/articles/articles.component';
-import { ResizerComponent } from './cards/resizer/resizer.component';
-import { templateComponent } from './cards/template/template.component';
-import { MonitorComponent } from './cards/monitor/monitor.component';
-
-
-
-
-import { HomeMenuComponent } from './cards/monitor/monitor-content/home-menu/home-menu.component';
-
-import { PlanComponent } from './cards/monitor/monitor-content/plan/plan.component';
-import { SpaceComponent } from './cards/monitor/monitor-content/space/space.component';
-import { PrivateOfficeComponent } from './cards/monitor/monitor-content/space/private-office/private-office.component';
-import { HotDeskComponent } from './cards/monitor/monitor-content/space/hot-desk/hot-desk.component';
-import { OpenAreaComponent } from './cards/monitor/monitor-content/space/open-area/open-area.component';
-import { MeetingRoomComponent } from './cards/monitor/monitor-content/space/meeting-room/meeting-room.component';
-import { TrackingSystemComponent } from './cards/tracking-system/tracking-system.component';
-import { LoginComponent } from './cards/tracking-system/login/login.component';
-import { ToDoListComponent } from './cards/to-do-list/to-do-list.component';
-import { WeatherApiComponent } from './cards/weather-api/weather-api.component';
-
-
 
 export const routes: Routes = [
-  { path: '', component: IntroComponent },
-  { path: 'intro', component: IntroComponent },
-  { path: 'platform', component: PlatformComponent },
+  { path: '', loadComponent: () => import('./intro/intro.component').then(m => m.IntroComponent) },
+  { path: 'intro', loadComponent: () => import('./intro/intro.component').then(m => m.IntroComponent) },
+  { path: 'platform', loadComponent: () => import('./platform/platform.component').then(m => m.PlatformComponent) },
   {
-    path: 'template', component: templateComponent,
+    path: 'template',
+    loadComponent: () => import('./cards/template/template.component').then(m => m.TemplateComponent),
     children: [
-      { path:'weather-api',component:WeatherApiComponent},
-      { path:'to-do-list',component: ToDoListComponent},
-      { path:'resizer', component: ResizerComponent },
+      { path: 'weather-api', loadComponent: () => import('./cards/weather-api/weather-api.component').then(m => m.WeatherApiComponent) },
+      { path: 'to-do-list', loadComponent: () => import('./cards/to-do-list/to-do-list.component').then(m => m.ToDoListComponent) },
+      { path: 'resizer', loadComponent: () => import('./cards/resizer/resizer.component').then(m => m.ResizerComponent) },
       {
-        path: 'monitor', component: MonitorComponent,
+        path: 'monitor',
+        loadComponent: () => import('./cards/monitor/monitor.component').then(m => m.MonitorComponent),
         children: [
-          { path: 'home-menu', component: HomeMenuComponent },
-          { path: 'space', component: SpaceComponent },
-          { path: 'private-office', component: PrivateOfficeComponent },
-          { path: 'hot-desk', component: HotDeskComponent },
-          { path: 'open-area', component: OpenAreaComponent },
-          { path: 'meeting-room', component: MeetingRoomComponent },
-          { path: 'plan', component: PlanComponent },
+          { path: 'home-menu', loadComponent: () => import('./cards/monitor/monitor-content/home-menu/home-menu.component').then(m => m.HomeMenuComponent) },
+          { path: 'space', loadComponent: () => import('./cards/monitor/monitor-content/space/space.component').then(m => m.SpaceComponent) },
+          { path: 'private-office', loadComponent: () => import('./cards/monitor/monitor-content/space/private-office/private-office.component').then(m => m.PrivateOfficeComponent) },
+          { path: 'hot-desk', loadComponent: () => import('./cards/monitor/monitor-content/space/hot-desk/hot-desk.component').then(m => m.HotDeskComponent) },
+          { path: 'open-area', loadComponent: () => import('./cards/monitor/monitor-content/space/open-area/open-area.component').then(m => m.OpenAreaComponent) },
+          { path: 'meeting-room', loadComponent: () => import('./cards/monitor/monitor-content/space/meeting-room/meeting-room.component').then(m => m.MeetingRoomComponent) },
+          { path: 'plan', loadComponent: () => import('./cards/monitor/monitor-content/plan/plan.component').then(m => m.PlanComponent) },
         ]
       },
       {
-        path: 'tracking-system', component: TrackingSystemComponent,
+        path: 'tracking-system',
+        loadComponent: () => import('./cards/tracking-system/tracking-system.component').then(m => m.TrackingSystemComponent),
         children: [
-          { path: 'login', component: LoginComponent },
+          { path: 'login', loadComponent: () => import('./cards/tracking-system/login/login.component').then(m => m.LoginComponent) },
         ]
       }
     ]
   },
-  { path: 'articles', component: ArticlesComponent },
+  { path: 'articles', loadComponent: () => import('./articles/articles/articles.component').then(m => m.ArticlesComponent) },
 ];

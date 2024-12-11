@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { templateComponent } from '../template/template.component';
+import { TemplateComponent } from '../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import { SubmenuComponent } from "./submenu/submenu.component";
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-monitor',
   standalone: true,
-  imports: [templateComponent, MatIconModule, SubmenuComponent, CommonModule],
+  imports: [TemplateComponent, MatIconModule, SubmenuComponent, CommonModule],
   templateUrl: './monitor.component.html',
 })
 export class MonitorComponent {

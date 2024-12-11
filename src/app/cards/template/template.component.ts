@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   animations:[]
 
 })
-export class templateComponent {
+export class TemplateComponent {
   @Input() animationState: 'blur' | 'clear' = 'blur';
   @Input() templateStyle: string = 'text-white';
   

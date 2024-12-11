@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { templateComponent } from '../template/template.component';
+import { TemplateComponent } from '../template/template.component';
 
 interface Todo {
   text: string;
@@ -13,7 +13,7 @@ interface Todo {
 @Component({
   selector: 'app-to-do-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatIconModule,templateComponent],
+  imports: [CommonModule, FormsModule, MatIconModule,TemplateComponent],
   templateUrl: './to-do-list.component.html',
 })
 export class ToDoListComponent {
