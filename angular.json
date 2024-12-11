@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "./",
+            "baseHref": "/helloleemotseng/",
             "outputPath": "dist/2025-pf",
             "index": "src/index.html",
             "browser": "src/main.ts",
