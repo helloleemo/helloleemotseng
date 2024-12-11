@@ -22,42 +22,42 @@ export class PrivateOfficeComponent {
   // dynamicLinkBackTo: string = `${environment.linkBaseUrl}/space`;
 
   privateOfficeImgs: ImgItems[] = [{
-    imgUrl: "monitor/space/Private-office/0923_4.jpg",
+    imgUrl: "monitor/space/Private-office/0923_4.webp",
     name: "",
     descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: "monitor/space/Private-office/P1103405.jpg",
+    imgUrl: "monitor/space/Private-office/P1103405.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: "monitor/space/Private-office/P1103588-HDR.png",
+    imgUrl: "monitor/space/Private-office/P1103588-HDR.webp",
     name: "",
     descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: "monitor/space/Private-office/P1103590.png",
+    imgUrl: "monitor/space/Private-office/P1103590.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   },  {
-    imgUrl: "monitor/space/Private-office/S__219357186_0.jpg",
+    imgUrl: "monitor/space/Private-office/S__219357186_0.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   }, {
-    imgUrl: "monitor/space/Private-office/P1103592-HDR.png",
+    imgUrl: "monitor/space/Private-office/P1103592-HDR.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: "monitor/space/Private-office/P1103594-HDR.jpg",
+    imgUrl: "monitor/space/Private-office/P1103594-HDR.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",

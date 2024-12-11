@@ -27,7 +27,7 @@ export class CardsService {
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/to-do-list',
         hyperlink: '',
-        img: 'platform/website-3.png',
+        img: 'platform/website-3.webp',
         innerHtml: ``
       },
       {
@@ -38,7 +38,7 @@ export class CardsService {
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/resizer',
         hyperlink: '',
-        img: 'resizer/resizer.png',
+        img: 'resizer/resizer.webp',
         innerHtml: ``
       }, {
         id: 2,
@@ -47,7 +47,7 @@ export class CardsService {
         tags: ['Angular18', 'Tailwind', 'Monitor', 'Material Design UI'],
         linkto: '/template/monitor/home-menu',
         hyperlink: '',
-        img: 'platform/website-2.png',
+        img: 'platform/website-2.webp',
         description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
         innerHtml: ''
       }, {
@@ -57,7 +57,7 @@ export class CardsService {
         tags: ['User Interface', 'Figma'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/ui-annual.png',
+        img: 'platform/ui-annual.webp',
         description: 'Allows VIP participents to check agendas, speakers, locations, and other information during the annual conference.',
         innerHtml: ''
       }, {
@@ -67,7 +67,7 @@ export class CardsService {
         tags: ['User Reasearch', 'AI Detection', 'Medical Device'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/ui-aifree.png',
+        img: 'platform/ui-aifree.webp',
         description: 'This intelligent health promotion system integrates professional rehabilitation indication, offering remote and digital services for the seniors during rehabilitation or health promotion periods. It provides optimal rehabilitation plans with the goals of "gamification, intelligence, and customization."',
         innerHtml: ''
       }, {
@@ -87,10 +87,10 @@ export class CardsService {
         tags: ['Awards', 'Product Design', 'Medical Device'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/achievement-1.png',
+        img: 'platform/achievement-1.webp',
         description: 'Awarded the 18th Industrial Design Gold Medal in the Y.S. Award. This zero-contact rehabilitation training service integrates remote and digital medical forms to help patients conduct high-intensity rehabilitation at home. It reduces the burden on doctors and minimizes hospital visits, leveraging big data analysis to assist in medical judgments and introduce a new healthcare model.',
         innerHtml: `<div class="absolute left-10 bottom-10">
-        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 7,
@@ -99,10 +99,10 @@ export class CardsService {
         tags: ['Product Design', 'Medical Device'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/achievement-2.png',
+        img: 'platform/achievement-2.webp',
         description: '(Longevity-Ready Environments: Rethinking Physical Spaces for Century-Long Lives)Finalist in the Stanford Center on Longevity Design Challenge Asia. Proposes remote medical services for rehabilitation in an aging society, allowing seniors to rehabilitate at home.',
         innerHtml: `<div class="absolute left-10 bottom-10">
-        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 8,
@@ -111,10 +111,10 @@ export class CardsService {
         tags: ['Product Design', 'Kitchen Interface'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/achievement-3.png',
+        img: 'platform/achievement-3.webp',
         description: 'The intelligent interactive kitchen interface fosters family connections, creating a more humanized and futuristic kitchen experience through technology.',
         innerHtml: `<div class="absolute left-10 bottom-10">
-        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 9,
@@ -123,7 +123,7 @@ export class CardsService {
         tags: ['Graphic Deaign'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-1.png',
+        img: 'platform/graphics-1.webp',
         description: 'Website banners.',
         innerHtml: ''
       }, {
@@ -133,7 +133,7 @@ export class CardsService {
         tags: ['Illustration'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-2.png',
+        img: 'platform/graphics-2.webp',
         description: 'Illustration works.',
         innerHtml: ''
       }, {
@@ -143,7 +143,7 @@ export class CardsService {
         tags: ['Visual System Design'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-3.png',
+        img: 'platform/graphics-3.webp',
         description: 'Visual system design for an anesthesiology team aiming to promote "anesthesia safety" as a priority. Advocates correct anesthesia practices with a highly professional medical standard, ensuring all procedures are performed by specialized anesthesiologists. The design emphasizes greater safety and peace of mind for patients.',
         innerHtml: ''
       }, {
@@ -153,7 +153,7 @@ export class CardsService {
         tags: ['Visual System Design'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-5.png',
+        img: 'platform/graphics-5.webp',
         description: 'Linkoo combines "Link" and "All" to connect everything and create unlimited possibilities. The goal is to become a leading global trade provider, improving connectivity and efficiency across industries. At Linkoo, we believe connection is fundamental, fostering innovation, collaboration, and value creation. We aim to build a shared and sustainable environment through connections.',
         innerHtml: ''
       }, {
@@ -163,7 +163,7 @@ export class CardsService {
         tags: ['Educational Materials'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-6.png',
+        img: 'platform/graphics-6.webp',
         description: 'Educational materials for the Breast Imaging Division of NTUH, facilitating physicians in explaining medical knowledge to patients effectively.',
         innerHtml: ''
       }, {
@@ -173,7 +173,7 @@ export class CardsService {
         tags: ['Visual System Design'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-7.png',
+        img: 'platform/graphics-7.webp',
         description: 'A visual system design for ginger farming products from the Atayal tribe, located in Hsinchu\'s Mekarang Village.',
         innerHtml: ''
       }, {
@@ -183,7 +183,7 @@ export class CardsService {
         tags: ['Graphic Design'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/graphics-books.png',
+        img: 'platform/graphics-books.webp',
         description: 'Textbook designed for students learning Chinese classics and literature.',
         innerHtml: ''
       }, {
@@ -193,7 +193,7 @@ export class CardsService {
         tags: ['Product Design', 'Training Handle'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/product-baby-handle.png',
+        img: 'platform/product-baby-handle.webp',
         description: 'A baby handle designed to promote the development of infants\' hand muscles and sensory abilities. Based on market research, existing baby products often overlook the importance of grip design for early development, especially for hand coordination and strength training. This product combines cognitive development and functionality in a bottle handle.',
         innerHtml: ''
       }, {
@@ -203,7 +203,7 @@ export class CardsService {
         tags: ['Product Design', 'Medical Device'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/UX-article.png',
+        img: 'platform/UX-article.webp',
         description: 'Cards designed for children with articulation issues in early intervention, tailored to age and articulation development based on therapist interviews and relevant literature.',
         innerHtml: ''
       }, {
@@ -216,7 +216,7 @@ export class CardsService {
         img: '',
         description: 'For the Alpha generation, this proposal envisions a future lifestyle centered on makeup, reflecting the rapid evolution of technology.',
         innerHtml: `<div class="absolute left-10 bottom-10">
-        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 20,
@@ -225,10 +225,10 @@ export class CardsService {
         tags: ['Product Design', 'Furniture Design'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/achievement-4.png',
+        img: 'platform/achievement-4.webp',
         description: 'The UNI-ONE modular furniture won an honorable mention in the UNI-ONE furniture design competition. Designed for small rental spaces, this furniture can be customized into different configurations based on needs.',
         innerHtml: `<div class="absolute left-10 bottom-10">
-        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 21,
@@ -237,7 +237,7 @@ export class CardsService {
         tags: ['Vue', 'Commercial website', 'Shopping cart'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/website-1.png',
+        img: 'platform/website-1.webp',
         description: 'Jenqi Chair website providing comprehensive information on various chairs, including shopping cart functionality.',
         innerHtml: ''
       }, {
@@ -247,7 +247,7 @@ export class CardsService {
         tags: ['User Research', 'Figma', 'Product Management'],
         linkto: '',
         hyperlink: '',
-        img: 'platform/ui-delpot.png',
+        img: 'platform/ui-delpot.webp',
         description: 'Charging System provides users with information about charging stations and allows them to search for charging station locations.',
         innerHtml: ''
       }

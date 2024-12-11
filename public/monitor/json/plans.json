@@ -3,7 +3,7 @@
     {
       "name": "Hot Desk",
       "description": "Ideal for freelancers, remote professionals & digital nomads",
-      "imgUrl": "Plan/Hot-Desk.png",
+      "imgUrl": "Plan/Hot-Desk.webp",
 
       "price": "NT$6,500/month",
       "features": [
@@ -31,7 +31,7 @@
     {
       "name": "Dedicated Desk",
       "description": "Ideal for solopreneurs, creative professionals & remote teams.",
-      "imgUrl": "Plan/Dedicated-Desk.png",
+      "imgUrl": "Plan/Dedicated-Desk.webp",
       "price": "from NT$10,000/month",
       "features": [
         "Designated seating",
@@ -60,7 +60,7 @@
     {
       "name": "Private Office",
       "description": "Ideal for startup entrepreneurs, small & medium businesses",
-      "imgUrl": "Plan/Private-Office.png",
+      "imgUrl": "Plan/Private-Office.webp",
       "price": "Enquire now",
       "features": [
         "Secure and private rooms",

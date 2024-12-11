@@ -17,19 +17,19 @@ export class MeetingRoomComponent {
 
   meetingRoomImgs: ImgItems[] = [{
 
-    imgUrl: `monitor/space/Meeting-Room/P1103412.jpg`,
+    imgUrl: `monitor/space/Meeting-Room/P1103412.webp`,
     name: "",
     descrioption: "",
     span: "col-span-3",
   },
   {
-    imgUrl: `monitor/space/Meeting-Room/P1103415.jpg`,
+    imgUrl: `monitor/space/Meeting-Room/P1103415.webp`,
     name: "",
     descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: `monitor/space/Meeting-Room/P1103448.jpg`,
+    imgUrl: `monitor/space/Meeting-Room/P1103448.webp`,
     name: "",
     descrioption: "",
     span: "row-span-2 col-span-2",

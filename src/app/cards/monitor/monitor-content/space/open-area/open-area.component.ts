@@ -17,43 +17,43 @@ export class OpenAreaComponent {
 
 
   openAreaImgs: ImgItems[] = [{
-    imgUrl: "monitor/space/Open-Area/P1103389.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103389.webp",
     name: "",
     descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: "monitor/space/Open-Area/P1103438.png",
+    imgUrl: "monitor/space/Open-Area/P1103438.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: "monitor/space/Open-Area/P1103443.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103443.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: "monitor/space/Open-Area/P1103446.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103446.webp",
     name: "",
     descrioption: "",
     span: "col-span-2",
 
   }, {
-    imgUrl: "monitor/space/Open-Area/P1103455.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103455.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: "monitor/space/Open-Area/P1103466.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103466.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   }
     , {
-    imgUrl: "monitor/space/Open-Area/P1103467.jpg",
+    imgUrl: "monitor/space/Open-Area/P1103467.webp",
     name: "",
     descrioption: "",
     span: "col-span-1",
