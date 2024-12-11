@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/helloleemotseng/",
+            "baseHref": "./",
             "outputPath": "dist/2025-pf",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -88,6 +88,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
