@@ -20,6 +20,7 @@ import { MeetingRoomComponent } from './cards/monitor/monitor-content/space/meet
 import { TrackingSystemComponent } from './cards/tracking-system/tracking-system.component';
 import { LoginComponent } from './cards/tracking-system/login/login.component';
 import { ToDoListComponent } from './cards/to-do-list/to-do-list.component';
+import { WeatherApiComponent } from './cards/weather-api/weather-api.component';
 
 
 
@@ -30,8 +31,9 @@ export const routes: Routes = [
   {
     path: 'template', component: templateComponent,
     children: [
+      { path:'weather-api',component:WeatherApiComponent},
       { path:'to-do-list',component: ToDoListComponent},
-      { path: 'resizer', component: ResizerComponent },
+      { path:'resizer', component: ResizerComponent },
       {
         path: 'monitor', component: MonitorComponent,
         children: [

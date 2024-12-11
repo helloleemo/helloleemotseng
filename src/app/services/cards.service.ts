@@ -39,8 +39,18 @@ export class CardsService {
         img: 'platform/website-2.webp',
         description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
         innerHtml: ''
+      },{
+        id: 25,
+        tag: ['Websites / Components'],
+        name: 'Weather API',
+        description: 'This is a Weather API that allows users to search for weather information by entering the city name.',
+        tags: ['Angular18', 'Tailwind','API'],
+        linkto: '/template/weather-api',
+        hyperlink: '',
+        img: '',
+        innerHtml: ``
       }, {
-        id: 1,
+        id: 26,
         tag: ['Websites / Components'],
         name: 'Resizer Component',
         description: 'This is a Resizer component that allows adjusting the size of the left and right sections by moving the middle gutter.',

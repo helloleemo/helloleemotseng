@@ -33,7 +33,7 @@ interface tagItems {
     trigger('cardAnimation', [
       state('hidden', style({ opacity: 0, transform: 'translateY(20px)' })),
       state('visible', style({ opacity: 1, transform: 'translateY(0)' })),
-      transition('hidden => visible', animate('0.3s ease-in-out')),
+      transition('hidden => visible', animate('0.5s ease-out')),
     ]),
 
   ]
@@ -44,6 +44,9 @@ export class PlatformComponent implements OnInit {
   mouseService = inject(MouseService);
   http = inject(HttpClient);
   cardStates: string[] = [];
+
+  observer: IntersectionObserver | undefined;
+
 
   // hover state
   isHovered = false;
@@ -70,7 +73,7 @@ export class PlatformComponent implements OnInit {
       id: 2,
       name: "Websites / Components",
       description: ""
-    },{
+    }, {
       id: 3,
       name: "UIUX",
       description: ""
@@ -88,10 +91,9 @@ export class PlatformComponent implements OnInit {
   ngOnInit(): void {
     this.cardList = this.cardsService.cardsList();
     this.initializeCardStates();
+    this.setupIntersectionObserver();
     this.animateAllCards();
-    window.scrollTo(0, 0); 
-
-
+    window.scrollTo(0, 0);
   }
 
   initializeCardStates(): void {
@@ -99,6 +101,42 @@ export class PlatformComponent implements OnInit {
     this.hoverStates = new Array(this.cardList.length).fill(false);
   }
 
+  setupIntersectionObserver(): void {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    this.observer = new IntersectionObserver(this.onIntersection.bind(this), options);
+
+    setTimeout(() => {
+      const cardElements = document.querySelectorAll('.card-container');
+      cardElements.forEach((card, index) => {
+        if (this.observer) this.observer.observe(card);
+      });
+
+      cardElements.forEach((card) => {
+        this.observer?.observe(card);
+      });
+    }, 0);
+  }
+
+  onIntersection(entries: IntersectionObserverEntry[]): void {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = Array.from(entry.target.parentElement?.children || []).indexOf(entry.target);
+
+        if (this.cardStates[index] === 'hidden') {
+          this.cardStates[index] = 'visible';
+        }
+
+        if (this.observer) {
+          this.observer.unobserve(entry.target);
+        }
+      }
+    });
+  }
 
   animateAllCards(): void {
     this.cardList.forEach((_, index) => {
@@ -123,7 +161,6 @@ export class PlatformComponent implements OnInit {
     });
   }
 
-
   filterCards(): CardInterface[] {
     if (this.selectedTag === "All") {
       return this.cardList;
@@ -133,7 +170,6 @@ export class PlatformComponent implements OnInit {
     );
   }
 
-
   hoverActive: boolean = false;
   hoverStates: boolean[] = [];
 
@@ -142,13 +178,10 @@ export class PlatformComponent implements OnInit {
       this.hoverStates[index] = true;
     }
   }
-
   hideHover(index: number): void {
     if (this.hoverStates[index] !== undefined) {
       this.hoverStates[index] = false;
     }
   }
-
-
 
 }

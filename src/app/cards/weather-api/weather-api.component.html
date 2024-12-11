@@ -1,0 +1,27 @@
+<input type="text" [(ngModel)]="cityName" placeholder="請輸入城市名稱" />
+<button (click)="getWeather()">查詢天氣</button>
+
+<div class="weather-container">
+  <h1>{{ cityName }} 天氣預報</h1>
+  <div *ngIf="weatherData; else loading">
+    <p>
+      天氣現象：
+      {{ weatherData.weatherElement[0].time[0].parameter.parameterName }}
+    </p>
+    <p>
+      最高溫度：
+      {{ weatherData.weatherElement[4].time[0].parameter.parameterName }}°C
+    </p>
+    <p>
+      最低溫度：
+      {{ weatherData.weatherElement[2].time[0].parameter.parameterName }}°C
+    </p>
+    <p>
+      降雨機率：
+      {{ weatherData.weatherElement[1].time[0].parameter.parameterName }}%
+    </p>
+  </div>
+  <ng-template #loading>
+    <p>載入中...</p>
+  </ng-template>
+</div>
