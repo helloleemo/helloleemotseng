@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="p-3 mx-auto pt-[100px]">
+<div class="p-3 mx-auto pt-[100px] max-w-5xl">
   <div class="tags flex space-x-2 flex-wrap pb-4">
     @for (tag of tagList; track $index) {
     <div
@@ -18,7 +18,7 @@
     </div>
     }
   </div>
-  <div class="grid gap-5 sm:grid-cols-1 xl:grid-cols-2">
+  <div class="grid gap-5 grid-cols-1">
     @for (item of filterCards() ;track item.id; let i = $index) {
     <div
       [@cardAnimation]="cardStates[i]"

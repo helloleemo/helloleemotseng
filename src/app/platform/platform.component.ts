@@ -68,25 +68,17 @@ export class PlatformComponent implements OnInit {
       description: ""
     }, {
       id: 2,
-      name: "Website",
+      name: "Websites / Components",
       description: ""
-    }, {
-      id: 1,
-      name: "Components",
-      description: ""
-    }, {
+    },{
       id: 3,
       name: "UIUX",
       description: ""
     }, {
       id: 3,
-      name: "Product",
+      name: "Others",
       description: ""
-    },{
-      id: 3,
-      name: "Graphics",
-      description: ""
-    },
+    }
   ]
 
   // Cards list
