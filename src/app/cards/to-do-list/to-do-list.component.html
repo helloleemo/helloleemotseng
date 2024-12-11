@@ -1,0 +1,46 @@
+<div class="wrapper h-screen bg-gray-100 flex items-center justify-center">
+  <div class="container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6">To Do List</h1>
+    <div class="input flex items-center gap-2 mb-4">
+      <input
+        [(ngModel)]="newTodo"
+        (keyup.enter)="onAddTodo()"
+        type="text"
+        placeholder="Add an item..."
+        class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <div
+        (click)="onChangeColor()"
+        [class]="currentColor"
+        class="w-6 h-6 rounded-full border border-gray-400 cursor-pointer"
+      ></div>
+      <button
+        (click)="onAddTodo()"
+        class="bg-primary text-white min-w-[40px] min-h-[40px] rounded hover:bg-primary/80 transition"
+      >
+        <mat-icon class="pt-[3px]">add</mat-icon>
+      </button>
+    </div>
+    <ul class="space-y-2 items-center">
+      <li
+        *ngFor="let todo of todos; let i = index"
+        [class]="todo.color"
+        class="flex items-center justify-center px-4 py-2 rounded bg-gray-200 text-gray-800"
+      >
+        <div (click)="onToggleComplete(i)" class="cursor-pointer">
+          <mat-icon class="text-white pt-1">
+            {{ todo.completed ? "check_box" : "check_box_outline_blank" }}
+          </mat-icon>
+        </div>
+        <p [class.line-through]="todo.completed" class="flex-1 px-2 text-white">
+          {{ todo.text }}
+        </p>
+        <div (click)="onRemoveTodo(i)" class="cursor-pointer">
+          <mat-icon class="text-white hover:text-white/90 transition-all pt-1"
+            >close</mat-icon
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

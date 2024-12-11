@@ -19,6 +19,7 @@ import { OpenAreaComponent } from './cards/monitor/monitor-content/space/open-ar
 import { MeetingRoomComponent } from './cards/monitor/monitor-content/space/meeting-room/meeting-room.component';
 import { TrackingSystemComponent } from './cards/tracking-system/tracking-system.component';
 import { LoginComponent } from './cards/tracking-system/login/login.component';
+import { ToDoListComponent } from './cards/to-do-list/to-do-list.component';
 
 
 
@@ -29,6 +30,7 @@ export const routes: Routes = [
   {
     path: 'template', component: templateComponent,
     children: [
+      { path:'to-do-list',component: ToDoListComponent},
       { path: 'resizer', component: ResizerComponent },
       {
         path: 'monitor', component: MonitorComponent,
