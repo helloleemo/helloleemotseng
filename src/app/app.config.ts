@@ -9,7 +9,7 @@ import { MouseService } from './services/mouse.service';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes,withHashLocation()),
+    provideRouter(routes),
     provideAnimationsAsync(),
     provideHttpClient(),
     MouseService,
