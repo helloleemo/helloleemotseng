@@ -21,9 +21,9 @@ export class CardsService {
     return [
       {
         id: 23,
-        tag: ['Website'],
-        name: 'Todo List ',
-        description: '',
+        tag: ['Website','Components'],
+        name: 'Todo List',
+        description: 'This is a simple to-do list application that allows users to add, edit, and delete tasks.',
         tags: ['Angular18', 'Tailwind'],
         linkto: '/template/to-do-list',
         hyperlink: '',
@@ -89,8 +89,8 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/achievement-1.png',
         description: 'Awarded the 18th Industrial Design Gold Medal in the Y.S. Award. This zero-contact rehabilitation training service integrates remote and digital medical forms to help patients conduct high-intensity rehabilitation at home. It reduces the burden on doctors and minimizes hospital visits, leveraging big data analysis to assist in medical judgments and introduce a new healthcare model.',
-        innerHtml: `<div class="absolute right-10 top-10">
-        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 7,
@@ -101,8 +101,8 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/achievement-2.png',
         description: '(Longevity-Ready Environments: Rethinking Physical Spaces for Century-Long Lives)Finalist in the Stanford Center on Longevity Design Challenge Asia. Proposes remote medical services for rehabilitation in an aging society, allowing seniors to rehabilitate at home.',
-        innerHtml: `<div class="absolute right-10 top-10">
-        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 8,
@@ -113,8 +113,8 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/achievement-3.png',
         description: 'The intelligent interactive kitchen interface fosters family connections, creating a more humanized and futuristic kitchen experience through technology.',
-        innerHtml: `<div class="absolute right-10 top-10">
-        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 9,
@@ -215,8 +215,8 @@ export class CardsService {
         hyperlink: '',
         img: '',
         description: 'For the Alpha generation, this proposal envisions a future lifestyle centered on makeup, reflecting the rapid evolution of technology.',
-        innerHtml: `<div class="absolute right-10 top-10">
-        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 20,
@@ -227,8 +227,8 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/achievement-4.png',
         description: 'The UNI-ONE modular furniture won an honorable mention in the UNI-ONE furniture design competition. Designed for small rental spaces, this furniture can be customized into different configurations based on needs.',
-        innerHtml: `<div class="absolute right-10 top-10">
-        <img src="platform/award.png" class="w-[200px] object-cover" alt="resizer">
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.png" class="w-[180px] object-cover" alt="resizer">
         </div>`
       }, {
         id: 21,
