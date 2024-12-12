@@ -1,5 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 @Injectable({
@@ -7,15 +7,40 @@ import { environment } from '../../environments/environment';
 })
 export class WeatherService {
 
-  private apiUrl = `${environment.apiUrl}`;
-  private apiKey = `${environment.apiUrl}`;
+  private apiUrl = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=`
+  private apiKey = `${environment.weatherApiKey}`
 
-  constructor(private http: HttpClient) { }
+  http = inject(HttpClient) // inject HttpClient
 
-  getWeatherForecast(city: string): Observable<any> {
-    const params = new HttpParams()
-      .set('Authorization', this.apiKey)
-      .set('locationName', city);
-    return this.http.get(`${this.apiUrl}/F-C0032-001`, { params });
+  getWeatherData(): Observable<any> {
+    return this.http.get(this.apiUrl + this.apiKey)
   }
+
+  
+// GET
+// getAllData(): Observable<PersonModal[]> {
+//   return this.http.get<PersonModal[]>(`${this.mainUrl}/posts`);
+// }
+
+// GET by id
+// getData(): Observable<PersonModal[]> {
+//   return this.http.get<PersonModal[]>(`${this.mainUrl}/posts/1`);
+// }
+
+// POST
+// insertData(request: PersonModal) {
+//   return this.http.post(`${this.mainUrl}/posts`, request, this.options);
+// }
+
+// //UPDATE
+// updateData(request: PersonModal, id: number) {
+//   return this.http.put(`${this.mainUrl}/posts/${id}`, request, this.options);
+// }
+
+// DELETEE
+// deleteData(id: number) {
+//   return this.http.delete(`${this.mainUrl}/posts/${id}`, this.options);
+// }
+
 }
+

@@ -42,9 +42,9 @@ export class CardsService {
       },{
         id: 25,
         tag: ['Websites / Components'],
-        name: 'Weather API',
+        name: '都是WEATHER你 with weather API',
         description: 'This is a Weather API that allows users to search for weather information by entering the city name.',
-        tags: ['Angular18', 'Tailwind','API'],
+        tags: ['weather API','Angular18', 'Tailwind',],
         linkto: '/template/weather-api',
         hyperlink: '',
         img: '',
@@ -158,6 +158,18 @@ export class CardsService {
         innerHtml: `<div class="absolute left-10 bottom-10">
         <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
         </div>`
+      }, {
+        id: 17,
+        tag: ['Achivements'],
+        name: 'Articulation Training Cards',
+        tags: ['IEEE ECBIOS 2023 SCI','Product Design', 'Medical Device'],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/UX-article.webp',
+        description: 'Cards designed for children with articulation issues in early intervention, tailored to age and articulation development based on therapist interviews and relevant literature.',
+        innerHtml: `<div class="absolute left-10 bottom-10">
+        <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
+        </div>`
       },{
         id: 9,
         tag: ['Others'],
@@ -237,16 +249,6 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/product-baby-handle.webp',
         description: 'A baby handle designed to promote the development of infants\' hand muscles and sensory abilities. Based on market research, existing baby products often overlook the importance of grip design for early development, especially for hand coordination and strength training. This product combines cognitive development and functionality in a bottle handle.',
-        innerHtml: ''
-      }, {
-        id: 17,
-        tag: ['Others'],
-        name: 'Articulation Training Cards',
-        tags: ['Product Design', 'Medical Device'],
-        linkto: '',
-        hyperlink: '',
-        img: 'platform/UX-article.webp',
-        description: 'Cards designed for children with articulation issues in early intervention, tailored to age and articulation development based on therapist interviews and relevant literature.',
         innerHtml: ''
       }, {
         id: 19,

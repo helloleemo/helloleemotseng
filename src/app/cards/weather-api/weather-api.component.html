@@ -1,27 +1,45 @@
-<input type="text" [(ngModel)]="cityName" placeholder="請輸入城市名稱" />
-<button (click)="getWeather()">查詢天氣</button>
+<app-template [templateStyle]="'text-dark'">
+  <mat-icon class="text-2xl">arrow_back</mat-icon>
+  <p class="text-2xl pl-2 font-medium">Back to platform</p>
+</app-template>
 
-<div class="weather-container">
-  <h1>{{ cityName }} 天氣預報</h1>
-  <div *ngIf="weatherData; else loading">
-    <p>
-      天氣現象：
-      {{ weatherData.weatherElement[0].time[0].parameter.parameterName }}
-    </p>
-    <p>
-      最高溫度：
-      {{ weatherData.weatherElement[4].time[0].parameter.parameterName }}°C
-    </p>
-    <p>
-      最低溫度：
-      {{ weatherData.weatherElement[2].time[0].parameter.parameterName }}°C
-    </p>
-    <p>
-      降雨機率：
-      {{ weatherData.weatherElement[1].time[0].parameter.parameterName }}%
-    </p>
+<div class="mx-auto max-w-screen-lg pt-[100px] sm:pt-[200px]">
+  <div class="flex flex-row gap flex-wrap gap-y-3 justify-center items-center">
+    <pre class="font-bold text-3xl text-dark/50 spaced-text monospace-text">
+都是WEATHER你</pre
+    >
+
+    <div class="w-full text-center">
+      <div class="px-2">
+        <select
+          name="cities"
+          class="w-[300px] rounded-md border border-dark/30 p-2"
+          [(ngModel)]="selectedLocation"
+          ariaLabel="Select an option"
+        >
+          <option value="" disabled selected hidden>請選擇地區</option>
+          <option *ngFor="let item of locations" [value]="item">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <button
+      class="w-[300px] hover:bg-dark/5 transition-colors border border-dark/30 py-1 px-5 rounded-md"
+      (click)="getInfo()"
+    >
+      <p class="text-dark/80">取得該地區天氣資訊</p>
+    </button>
   </div>
-  <ng-template #loading>
-    <p>載入中...</p>
-  </ng-template>
+</div>
+
+<div class="info">
+  <div class="location">OOO</div>
+  <div class="grid grid-cols-3 gap-3 mx-auto max-w-screen-lg">
+    <div class="border border-red-400 w-full h-[300px]"></div>
+    <div class="border border-red-400 w-full h-[300px]"></div>
+    <div class="border border-red-400 w-full h-[300px]"></div>
+
+    <div class="pb-[200px]"></div>
+  </div>
 </div>
