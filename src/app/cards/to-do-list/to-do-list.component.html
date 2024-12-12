@@ -3,15 +3,26 @@
   <p class="text-2xl pl-2 font-medium">Back to platform</p>
 </app-template>
 <div class="wrapper h-screen bg-gray-300 flex items-center justify-center">
-  <div class="container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-    <h1 class="text-3xl font-bold text-center mb-6">To Do List</h1>
+  <div class="container bg-white p-8 rounded-lg shadow-lg w-fit">
+    <h1 class="text-2xl font-bold text-center mb-6 text-nowrap items-center">
+      Todo list <span class="text-dark/40 text-xl">with Drag and Drop API</span>
+      <span class="text-dark/40"
+        ><mat-icon class="text-[18px]">pan_tool</mat-icon></span
+      >
+    </h1>
     <div class="input flex items-center gap-2 mb-4">
       <input
-        [(ngModel)]="newTodo"
-        (keyup.enter)="onAddTodo()"
+        [value]="newItem"
+        (input)="onInputChange($event)"
+        (keyup.enter)="AddItem()"
         type="text"
-        placeholder="Add an item..."
-        class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        [class]="
+          isError
+            ? 'border-2 border-red-500 placeholder:text-red-500'
+            : 'border-gray-300'
+        "
+        [placeholder]="isError ? 'Invalid value' : 'Add a new item'"
+        class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:none"
       />
       <div
         (click)="onChangeColor()"
@@ -19,32 +30,38 @@
         class="w-6 h-6 rounded-full border border-gray-400 cursor-pointer"
       ></div>
       <button
-        (click)="onAddTodo()"
-        class="bg-primary text-white min-w-[40px] min-h-[40px] rounded hover:bg-primary/80 transition"
+        (click)="AddItem()"
+        class="bg-dark text-white min-w-[40px] min-h-[40px] rounded hover:bg-dark/80 transition"
       >
         <mat-icon class="pt-[3px]">add</mat-icon>
       </button>
     </div>
+
     <ul class="space-y-2 items-center">
+      @for (item of todolist; track $index) {
       <li
-        *ngFor="let todo of todos; let i = index"
-        [class]="todo.color"
-        class="flex items-center justify-center px-4 py-2 rounded bg-gray-200 text-gray-800"
+        draggable="true"
+        (dragstart)="dragStart($event, $index)"
+        (drop)="drop($event, $index)"
+        (dragover)="dragging($event)"
+        [class]="item.color"
+        class="flex items-center justify-center px-4 py-2 rounded text-gray-800"
       >
-        <div (click)="onToggleComplete(i)" class="cursor-pointer">
+        <div (click)="onToggleComplete($index)" class="cursor-pointer">
           <mat-icon class="text-white pt-1">
-            {{ todo.completed ? "check_box" : "check_box_outline_blank" }}
+            {{ item.completed ? "check_box" : "check_box_outline_blank" }}
           </mat-icon>
         </div>
-        <p [class.line-through]="todo.completed" class="flex-1 px-2 text-white">
-          {{ todo.text }}
+        <p [class.line-through]="item.completed" class="flex-1 px-2 text-white">
+          {{ item.text }}
         </p>
-        <div (click)="onRemoveTodo(i)" class="cursor-pointer">
+        <div (click)="onRemoveTodo($index)" class="cursor-pointer">
           <mat-icon class="text-white hover:text-white/90 transition-all pt-1"
             >close</mat-icon
           >
         </div>
       </li>
+      }
     </ul>
   </div>
 </div>
