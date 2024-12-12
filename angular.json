@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "baseHref": "/helloleemotseng/",
-            "outputPath": "dist/2025-pf",
+            "outputPath": "dist/helloleemotseng",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
