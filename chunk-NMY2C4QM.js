@@ -1,0 +1,1 @@
+import{Z as r}from"./chunk-OD3KXKIL.js";var e=class t{cursorX=0;cursorY=0;isPointer=!1;constructor(){document.addEventListener("mousemove",o=>{this.cursorX=o.clientX,this.cursorY=o.clientY})}togglePointer(o){this.isPointer=o}static \u0275fac=function(i){return new(i||t)};static \u0275prov=r({token:t,factory:t.\u0275fac,providedIn:"root"})};export{e as a};
