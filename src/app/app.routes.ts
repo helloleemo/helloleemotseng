@@ -28,6 +28,7 @@ export const routes: Routes = [
         path: 'tracking-system',
         loadComponent: () => import('./cards/tracking-system/tracking-system.component').then(m => m.TrackingSystemComponent),
         children: [
+          {path: 'shipment-summary', loadComponent: () => import('./cards/tracking-system/shipment-summary/shipment-summary.component').then(m => m.ShipmentSummaryComponent)},
           { path: 'login', loadComponent: () => import('./cards/tracking-system/login/login.component').then(m => m.LoginComponent) },
         ]
       }
