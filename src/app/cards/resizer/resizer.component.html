@@ -16,38 +16,43 @@
 </div>
 }
 <!-- Spinner -->
+@if (isLoading) {
 <div
-  *ngIf="isLoading; else content"
-  class="flex justify-center items-center w-[100vw] h-[100vh]"
+  [@fade]="isLoading"
+  class="fixed top-0 left-0 w-full h-full bg-[#e8e8e8] flex justify-center items-center z-20"
 >
-  <mat-spinner active-indicator-color="#555" diameter="50"></mat-spinner>
+  <app-loadging
+    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+  ></app-loadging>
 </div>
-<ng-template #content>
-  <div class="w-full h-full">
-    <as-split direction="horizontal" gutterSize="10" (click)="destroyed()">
-      <!-- Left Panel -->
-      <as-split-area [size]="leftSize">
-        <div
-          class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
-        >
-          <img
-            class="w-full h-full object-cover"
-            src="resizer/resizer-colored.webp"
-            alt=""
-          />
-        </div>
-      </as-split-area>
-      <!-- Right Panel -->
-      <as-split-area id="rightSplitArea" [size]="rightSize">
-        <div
-          class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
-        >
-          <img
-            class="w-full h-full object-cover"
-            src="resizer/resizer-greyscale.webp"
-            alt=""
-          />
-        </div>
-      </as-split-area>
-    </as-split></div
-></ng-template>
+
+}
+
+<div class="w-full h-full">
+  <as-split direction="horizontal" gutterSize="10" (click)="destroyed()">
+    <!-- Left Panel -->
+    <as-split-area [size]="leftSize">
+      <div
+        class="imgBox top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="resizer/resizer-colored.webp"
+          alt=""
+        />
+      </div>
+    </as-split-area>
+    <!-- Right Panel -->
+    <as-split-area id="rightSplitArea" [size]="rightSize">
+      <div
+        class="imgBox fixed top-0 left-0 w-[100vw] h-[100vh] overflow-hidden left-image -z-10"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="resizer/resizer-greyscale.webp"
+          alt=""
+        />
+      </div>
+    </as-split-area>
+  </as-split>
+</div>
