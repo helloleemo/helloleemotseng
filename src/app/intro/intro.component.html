@@ -9,8 +9,12 @@
   <h1>{{ section1Title }}</h1>
   <div class="text-dark/80 text-lg" [innerHTML]="section1Description"></div>
   <div class="py-[20px]">
-    <div class="imgBox my-3 border border-dark/80 rounded-md h-[200px]">
-      <img [src]="section1Img" alt="" />
+    <div class="imgBox my-3 rounded-md h-[200px] w-full">
+      <img
+        class="w-full h-full object-cover rounded-md"
+        [src]="section1Img"
+        alt=""
+      />
     </div>
     <div class="content my-3">
       <p class="text-lg text-justify leading-relaxed text-dark/80">
@@ -18,64 +22,85 @@
       </p>
     </div>
     <div class="grid grid-cols-3 gap-1 sm:gap-3 md:gap-5">
-      <div class="w-full col-span-2 h-[200px] border border-dark rounded-md">
-        <img [src]="img1" alt="" />
+      <div class="w-full col-span-2 h-[200px] rounded-md">
+        <img
+          class="w-full h-full object-cover rounded-md"
+          [src]="img1"
+          alt=""
+        />
       </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
-        <img [src]="img2" alt="" />
+      <div class="w-full h-[200px] rounded-md">
+        <img
+          class="w-full h-full object-cover rounded-md"
+          [src]="img2"
+          alt=""
+        />
       </div>
-      <div class="w-full h-[200px] border border-dark rounded-md">
-        <img [src]="img3" alt="" />
+      <div>
+        <img
+          class="w-full h-[200px] rounded-md object-cover"
+          [src]="img3"
+          alt=""
+        />
       </div>
-      <div class="w-full col-span-2 h-[200px] border border-dark rounded-md">
-        <img [src]="img4" alt="" />
+      <div class="w-full col-span-2 h-[200px] rounded-md">
+        <img
+          class="w-full h-[200px] object-cover rounded-md"
+          [src]="img4"
+          alt=""
+        />
       </div>
     </div>
   </div>
 </div>
 <div class="mt-[100px] py-[100px] text-center bg-dark/10">
   <div class="max-w-5xl p-3 mx-auto">
-    <h1>Skills</h1>
-    <p class="text-dark/80 text-lg">
-      In my work, I have the following qualities:
-    </p>
+    <h1>Personality</h1>
+    <p class="text-dark/80 text-lg"></p>
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 pt-[20px] md:pt-[50px]"
     >
-      <div class="w-full h-[250px] border border-dark rounded-md">
-        <img src="" alt="" />
+      <div class="w-full h-[250px] rounded-md">
+        <img
+          class="w-full h-[250px] object-cover rounded-md overflow-hidden"
+          src="intro/work-articulation06.webp"
+          alt=""
+        />
       </div>
       <div class="w-full text-left">
         <h5 class="text-2xl pb-2">Design Thinking</h5>
-        <p class="text-dark/80 text-lg">
-          Every product process from understanding to design, from design to
-          realization, and from realization to application. With the rapid
-          advancement of technology, we continuously evaluate feasibility and
-          learn new techniques throughout project development, trying to meet
-          contemporary needs as much as possible.
+        <p class="text-dark/80 text-lg text-justify">
+          With the rapid advancement of technology, I've trying to keep up with
+          the latest techniques throughout project development and trying to
+          meet needs as much as possible.
         </p>
       </div>
       <div class="order-2 md:order-none w-full text-left">
         <h5 class="text-2xl pb-2">Cross-functional collaboration</h5>
-        <p class="text-dark/80 text-lg">
-          Each field has its unique expertise. Through cross-functional
-          collaboration, I am able to learn from others within projects, making
-          the outcomes more comprehensive and complete.
+        <p class="text-dark/80 text-lg text-justify">
+          EThrough cross-functional collaboration, I am able to learn from
+          others within projects, making the outcomes more comprehensive and
+          complete.
         </p>
       </div>
-      <div
-        class="order-1 md:order-none w-full h-[250px] border border-dark rounded-md"
-      >
-        <img alt="" />
+      <div class="order-1 md:order-none">
+        <img
+          class="w-full h-[250px] object-cover rounded-md overflow-hidden"
+          src="intro/Snipaste_2024-12-12_22-56-46.webp"
+        />
       </div>
-      <div class="w-full h-[250px] border border-dark rounded-md">
-        <img alt="" />
+      <div class="w-full h-[250px] rounded-md">
+        <img
+          class="w-full h-[250px] object-cover rounded-md overflow-hidden"
+          src="intro/Snipaste_2024-12-12_22-49-44.webp"
+          alt=""
+        />
       </div>
       <div class="w-full text-left">
         <h5 class="text-2xl pb-2">Project-Oriented Approach</h5>
-        <p class="text-dark/80 text-lg">
+        <p class="text-dark/80 text-lg text-justify">
           This is my preferred way of working: focusing on the target of a
-          project. This approach allows me to draw analogies and gain a broader
+          project. This approach allows me to draw analogies and gain a wider
           understanding of the integration between technology and results during
           project execution.
         </p>
@@ -85,7 +110,7 @@
 </div>
 <div class="pt-[150px] pb-[200px] text-center">
   <div class="max-w-5xl p-3 mx-auto flex flex-col justify-center">
-    <p class="pb-5 text-xl">See More...</p>
+    <p class="pb-5 text-xl font-semibold">See More...</p>
     <a
       matRipple
       class="btn-outline hover:bg-dark/90 mx-auto bg-dark text-white w-fit py-3 px-10 rounded-full"

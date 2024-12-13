@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="p-3 mx-auto pt-[100px] max-w-5xl">
-  <div class="tags flex space-x-2 flex-wrap pb-4">
+  <div class="tags flex space-x-2 flex-wrap justify-center pb-4">
     @for (tag of tagList; track $index) {
     <div
       matRipple
@@ -12,17 +12,17 @@
           ? 'bg-primary text-white border-primary'
           : ' transition-all hover:bg-dark/10 border-dark/40 text-dark/50'
       "
-      class="border transition-all duration-300 rounded-full w-fit px-3 py-1"
+      class="border mt-2 transition-all duration-300 rounded-full w-fit px-4 py-1"
     >
       <p>{{ tag.name }}</p>
     </div>
     }
   </div>
-  <div class="grid gap-5 grid-cols-1">
+  <div class="grid gap-5 grid-cols-1 pb-[50px]">
     @for (item of filterCards() ;track item.id; let i = $index) {
     <div
       [@cardAnimation]="cardStates[i]"
-      class="rounded-lg w-full h-[450px]"
+      class="rounded-lg w-full h-[350px] sm:h-[450px]"
       (mouseenter)="showHover(i)"
       (mouseleave)="hideHover(i)"
     >
@@ -38,7 +38,7 @@
         <div class="w-full h-full rounded-lg">
           @if(hoverStates[i]){
           <div
-            class="rounded-lg hoverText flex hover:bg-dark/70 transition-all duration-500 p-5 flex-col justify-between h-full"
+            class="rounded-lg hoverText flex hover:bg-dark/80 transition-all duration-500 p-5 flex-col justify-between h-full"
           >
             <div class="flex flex-col">
               <div class="tagsContainer flex gap-2 flex-wrap">
@@ -52,7 +52,7 @@
                 {{ item.name }}
               </h1>
               <p
-                class="text-xl pt-3 text-white/70"
+                class="text-xl pt-3 text-white/70 sm:block hidden"
                 [innerHTML]="item.description"
               ></p>
               <div [innerHTML]="item.innerHtml"></div>
@@ -65,9 +65,9 @@
                 (mouseleave)="mouseService.togglePointer(false)"
                 mat-ripple
                 [routerLink]="item.linkto"
-                class="bg-primary hover:bg-primary/90 flex text-white px-10 py-1 rounded-full"
+                class="bg-primary text-lg hover:bg-primary/90 flex text-white px-10 py-2 sm:w-fit w-full rounded-full"
               >
-                <p>View work</p>
+                <p class="text-center mx-auto">View work</p>
               </button>
               } @if (item.hyperlink !== '') {
               <a [href]="item.hyperlink" target="_blank">

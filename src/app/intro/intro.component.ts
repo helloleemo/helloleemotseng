@@ -13,24 +13,19 @@ import { MatRippleModule } from '@angular/material/core';
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {
-  greeting: string = `Quick Start`;
+  greeting: string = `HELLO, I'M LEEMO`;
   description: string = `<p>Frontend Developer.</p>
     <p>I am a frontend developer, focused on frontend framework technologies, developing web pages, user interface experiences, and designs. Also skilled in multimedia design and cross-functional collaboration.</p>`;
-  image: string = '';
   section1Title: string = 'About';
   section1Description: string = `<p>
   I am a frontend developer. Also skilled in multimedia design and cross-functional collaboration, I ran my own studio years ago, taking on roles such as graphic designer, product designer, and project manager.
   </p>`;
-  section1Img: string = '';
+  section1Img: string = `intro/Snipaste_2024-12-12_22-41-06.webp`;
   section1Description2: string = `I believe that whether it's a product or a technology, the ultimate goal is always Human-Centered Design. To achieve this, I often observe people and situations from different perspectives in daily life, trying to understand and ensure products are realized with greater precision.`;
-  img1: string = '';
-  img2: string = '';
-  img3: string = '';
-  img4: string = '';
-  img5: string = '';
-  img6: string = '';
-  img7: string = '';
-
+  img1: string = 'intro/Snipaste_2024-12-12_22-33-52.webp';
+  img2: string = 'intro/Snipaste_2024-12-12_22-11-25.webp';
+  img3: string = 'intro/Snipaste_2024-12-12_22-29-04.webp';
+  img4: string = 'intro/Snipaste_2024-12-12_22-34-51.webp';
 
   rippleColor: string = 'rgba(255, 255, 255, 0.5)';
 }   
