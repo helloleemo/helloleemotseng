@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class WeatherService {
-
+  constructor() { }
   private apiUrl = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=`
   private apiKey = `${environment.weatherApiKey}`
 
