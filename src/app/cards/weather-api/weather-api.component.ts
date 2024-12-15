@@ -14,15 +14,6 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   standalone: true,
   imports: [CommonModule, FormsModule, MatSelectModule, MatCardModule, TemplateComponent, MatIconModule],
   templateUrl: './weather-api.component.html',
-  animations: [
-    trigger('backgroundChange', [
-      state('hot', style({ backgroundColor: '#fff6b5' })), // 溫暖時背景顏色 (橘色)
-      state('mild', style({ backgroundColor: '#d9fdff' })), // 溫和時背景顏色 (藍色)
-      state('cold', style({ backgroundColor: '#c9c9c9' })), // 寒冷時背景顏色 (深藍色)
-
-      transition('* => *', [animate('1s ease-in-out')]) // 顏色變化動畫過渡時間
-    ])
-  ],
 })
 export class WeatherApiComponent implements OnInit {
 
@@ -57,7 +48,7 @@ export class WeatherApiComponent implements OnInit {
   getLocations(): void {
     this.weatherService.getWeatherData().subscribe({
       next: (res) => {
-        console.log('res', res);
+        // console.log('res', res);
         // 結構：records:{Locations:[0].Location:[{LocationName[0].WeatherElement[0].Time[0].ElementValue[0].Temperature}]}
         const locations = res.records.location;
         if (locations && locations.length > 0) {
@@ -74,14 +65,14 @@ export class WeatherApiComponent implements OnInit {
         next: (res) => {
           // 結構：records:{Locations:[0].Location:[{LocationName[0].WeatherElement[0].Time[0].ElementValue[0].Temperature}]}
           const locations = res.records.location;
-          // console.log('locations', locations);
+          // // console.log('locations', locations);
           if (locations && locations.length > 0) {
             const selected = locations.find((el: any) =>
               el.locationName === this.selectedLocation);
-            // console.log('selected', selected);
+            // // console.log('selected', selected);
             if (selected) {
               const weatherInfo = selected.weatherElement;
-              console.log('weatherInfo????', weatherInfo);
+              // console.log('weatherInfo????', weatherInfo);
               const MaxT = weatherInfo.find((el: any) => el.elementName === "MaxT");
               const MinT = weatherInfo.find((el: any) => el.elementName === "MinT");
               const CI = weatherInfo.find((el: any) => el.elementName === "CI");
@@ -93,9 +84,9 @@ export class WeatherApiComponent implements OnInit {
                   Number(time.parameter?.parameterName)
                 );
                 this.maxTemp = Math.max(...maxTemp);
-                console.log('maxTemp', this.maxTemp);
+                // console.log('maxTemp', this.maxTemp);
               } else {
-                console.log('還是找不到?');
+                // console.log('還是找不到?');
               }
 
               // MinTempr
@@ -109,13 +100,13 @@ export class WeatherApiComponent implements OnInit {
               // Descrpition
               if (CI && CI.time) {
                 this.description = CI.time[1].parameter.parameterName;
-                console.log('nowTemp:', this.description);
+                // console.log('nowTemp:', this.description);
               }
 
               // nowTemp
               if (MinT && MinT.time) {
                 this.nowTemp = MinT.time[1].parameter.parameterName;
-                console.log('nowtepm:', this.nowTemp);
+                // console.log('nowtepm:', this.nowTemp);
               }
 
             }
@@ -123,10 +114,10 @@ export class WeatherApiComponent implements OnInit {
           }
         },
         error: (err) => {
-          console.log(err);
+          // console.log(err);
         },
         complete: () => {
-          console.log('complete!!')
+          // console.log('complete!!')
         }
       },
     )
@@ -148,7 +139,7 @@ export class WeatherApiComponent implements OnInit {
   }
 
   // test() {
-  //   console.log(this.weatherData)
+  //   // console.log(this.weatherData)
   // }
 
 }

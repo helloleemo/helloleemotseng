@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "sed -i '' 's/REPLACE_API_KEY/${WEATHER_API_KEY}/g' src/environments/environment.prod.ts",
+    "deploy": "ng deploy --configuration=production"
   },
   "private": true,
   "dependencies": {
