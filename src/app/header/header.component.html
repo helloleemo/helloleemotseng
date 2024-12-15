@@ -8,18 +8,31 @@
         (mouseenter)="mouseService.togglePointer(true)"
         (mouseleave)="mouseService.togglePointer(false)"
         *ngFor="let item of menuList; let i = index"
-        routerLink="{{ item.link }}"
-        (click)="selectItem(item.name)"
         [class]="
           selectedItem === item.name
             ? 'border border-white bg-white text-dark/60 backdrop-blur-[5px]'
-            : 'border border-transparent  hover:bg-white/10   text-white/80'
+            : 'border border-transparent hover:bg-white/10 text-white/80'
         "
         class="transition-all duration-300 rounded-full px-3 sm:py-2 py-1"
       >
-        <p class="text-center" [innerHTML]="item.name">
-          {{ item.name }}
-        </p>
+        <!-- hyperlink -->
+        <a
+          *ngIf="item.hyperlink; else internalLink"
+          [href]="item.hyperlink"
+          target="_blank"
+          class="block text-center"
+          [innerHTML]="item.name"
+        ></a>
+
+        <!-- routerLink -->
+        <ng-template #internalLink>
+          <div
+            routerLink="{{ item.link }}"
+            (click)="selectItem(item.name)"
+            class="block text-center"
+            [innerHTML]="item.name"
+          ></div>
+        </ng-template>
       </div>
     </div>
   </div>

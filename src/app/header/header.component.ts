@@ -11,6 +11,7 @@ import { MouseService } from '../services/mouse.service';
 interface menuItems {
   name: string;
   link: string;
+  hyperlink?: string;
 }
 
 
@@ -41,9 +42,10 @@ export class HeaderComponent {
       name: `
         <div class="flex items-center">
           <i class="material-icons ">download</i>
-          <p class="sm:block hidden">Download<p>
+          <p class="sm:block hidden">CV<p>
         </div>`,
-      link: "/"
+      link: "",
+      hyperlink: "https://drive.usercontent.google.com/u/0/uc?id=1lXNZ7-86akO1uoOMP4TNDsqjbykK4ShT&export=download"
     }
   ]
 

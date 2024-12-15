@@ -172,26 +172,6 @@ export class CardsService {
         <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
         </div>`
       }, {
-        id: 9,
-        tag: ['Others'],
-        name: 'Banner',
-        tags: ['Graphic Deaign'],
-        linkto: '',
-        hyperlink: '',
-        img: 'platform/graphics-1.webp',
-        description: 'Website banners.',
-        innerHtml: ''
-      }, {
-        id: 10,
-        tag: ['Others'],
-        name: 'Illustration works',
-        tags: ['Illustration'],
-        linkto: '',
-        hyperlink: '',
-        img: 'platform/graphics-2.webp',
-        description: '',
-        innerHtml: ''
-      }, {
         id: 11,
         tag: ['Others',],
         name: 'Ho-Yi Anesthesiologist Visual System Design',
@@ -258,12 +238,32 @@ export class CardsService {
         tags: ['Proposals'],
         linkto: '',
         hyperlink: '',
-        img: '',
+        img: 'platform/Snipaste_2024-12-15_20-10-31.webp',
         description: 'For the Alpha generation, this proposal envisions a future lifestyle centered on makeup, reflecting the rapid evolution of technology.',
         innerHtml: `<div class="absolute left-10 bottom-10">
   <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
   </div>`
-      },
+      },{
+        id: 9,
+        tag: ['Others'],
+        name: 'Banner',
+        tags: ['Graphic Deaign'],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/graphics-1.webp',
+        description: 'Website banners.',
+        innerHtml: ''
+      }, {
+        id: 10,
+        tag: ['Others'],
+        name: 'Illustration works',
+        tags: ['Illustration'],
+        linkto: '',
+        hyperlink: '',
+        img: 'platform/graphics-2.webp',
+        description: '',
+        innerHtml: ''
+      }, 
     ];
   }
 }
