@@ -38,7 +38,7 @@ export class SpaceComponent implements OnInit {
     {
       name: 'Private Office',
       linkTo: '/template/monitor/private-office',
-      imgUrl: "/monitor/space/Private-office-thumbnail.webp",
+      imgUrl: "monitor/space/Private-office-thumbnail.webp",
       colSpan: "",
       rowSpan: "row-span-2",
     },
@@ -47,21 +47,21 @@ export class SpaceComponent implements OnInit {
       linkTo: '/template/monitor/hot-desk',
       colSpan: "col-span-1",
       rowSpan: "",
-      imgUrl: "/monitor/space/Hot-Desk-thunbnail.webp",
+      imgUrl: "monitor/space/Hot-Desk-thunbnail.webp",
     },
     {
       name: 'Open Area',
       linkTo: '/template/monitor/open-area',
       colSpan: "col-span-1",
       rowSpan: "",
-      imgUrl: "/monitor/space/Open-Area-thumbnail.webp",
+      imgUrl: "monitor/space/Open-Area-thumbnail.webp",
     },
     {
       name: 'Meeting Room',
       linkTo: '/template/monitor/meeting-room',
       colSpan: "col-span-2",
       rowSpan: "",
-      imgUrl: "/monitor/space/Meeting-Room-thumbnail.webp",
+      imgUrl: "monitor/space/Meeting-Room-thumbnail.webp",
     }
   ];
 

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, NavigationError, NavigationStart, Router, RouterModule, Event } from '@angular/router';
 import { LoadgingComponent } from '../../../../loadging/loadging.component';
 
 interface MenuItems {
@@ -28,16 +28,31 @@ interface MenuItems {
 })
 export class HomeMenuComponent {
 
+
+
+    isLoading = false;
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        this.isLoading = true;
+      } else if (event instanceof NavigationEnd || event instanceof NavigationError) {
+
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 500); 
+      }
+    });
+  }
+
     ngOnInit(): void {
-    this.startLoadingAnimation();
   }
 
   dynamicTitle: string = "Welcome to <br />Premiere New <br />Coworking Space.";
   rippleColor: string = 'rgba(255, 255, 255, 0.2)';
   radius: number = 500;
 
-  logImg = "/monitor/logo.png"
-  videoImg = "/monitor/T3Co-For-Web-30sec-720p.mp4"
+  logImg = "monitor/logo.png"
+  videoImg = "monitor/T3Co-For-Web-30sec-720p.mp4"
 
   isOpened: boolean = false;
 
@@ -79,13 +94,4 @@ export class HomeMenuComponent {
     // }
   ];
 
-  isLoading = true;
-
-  startLoadingAnimation(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-
-  }
 }

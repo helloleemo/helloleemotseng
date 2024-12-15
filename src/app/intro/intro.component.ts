@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
-import { RouterLink } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, NavigationError, RouterLink, Event } from '@angular/router';
 import { MatRippleModule } from '@angular/material/core';
 import { LoadgingComponent } from '../loadging/loadging.component';
 
@@ -31,9 +31,26 @@ export class IntroComponent {
   rippleColor: string = 'rgba(255, 255, 255, 0.5)';
 
 
-  isLoading = true;
+  isLoading = false;
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        this.isLoading = true;
+      } else if (event instanceof NavigationEnd || event instanceof NavigationError) {
+
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 500); 
+      }
+    });
+  }
   ngOnInit(): void {
-    this.startLoadingAnimation();
+      window.onload = () => { // on page load
+      this.isLoading = false;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
+    }
   }
 
   startLoadingAnimation(): void {

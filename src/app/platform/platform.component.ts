@@ -5,7 +5,7 @@ import { MatRipple } from '@angular/material/core';
 import { MouseService } from '../services/mouse.service';
 import { CardsService } from '../services/cards.service';
 import { CardInterface } from '../services/cards.service';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { NavigationEnd, NavigationError, NavigationStart, Router, RouterLink, RouterOutlet, Event } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HeaderComponent } from '../header/header.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,7 +23,7 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple, RouterLink, HeaderComponent, MatIconModule,LoadgingComponent],
+  imports: [CommonModule, MatRipple, RouterLink, HeaderComponent, MatIconModule, LoadgingComponent],
   templateUrl: './platform.component.html',
   animations: [
     trigger('hoverAnimation', [
@@ -89,9 +89,22 @@ export class PlatformComponent implements OnInit {
 
   cardList: CardInterface[] = [];
 
-  ngOnInit(): void {
-    this.startLoadingAnimation();
+  isLoading = false;
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        this.isLoading = true;
+      } else if (event instanceof NavigationEnd || event instanceof NavigationError) {
 
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 500); 
+      }
+    });
+  }
+
+
+  ngOnInit(): void {
     this.cardList = this.cardsService.cardsList();
     this.initializeCardStates();
     this.setupIntersectionObserver();
@@ -187,13 +200,11 @@ export class PlatformComponent implements OnInit {
     }
   }
 
-    isLoading = true;
   startLoadingAnimation(): void {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
     }, 900);
-
   }
 
 }
