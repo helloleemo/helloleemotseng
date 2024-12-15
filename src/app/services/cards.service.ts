@@ -33,7 +33,7 @@ export class CardsService {
       {
         id: 25,
         tag: ['Websites / Components'],
-        name: '都是WEATHER你 with weather API',
+        name: 'Weather API',
         description: 'This is a Weather API that allows users to search for weather information by entering the city name.',
         tags: ['Angular18', 'Rxjs', 'weather API', 'Tailwind',],
         linkto: '/template/weather-api',
