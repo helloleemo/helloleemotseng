@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 })
 export class WeatherService {
   constructor() { }
-  private apiUrl = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=`
+  private apiUrl = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=`
   private apiKey = `${environment.weatherApiKey}`
 
   http = inject(HttpClient) // inject HttpClient

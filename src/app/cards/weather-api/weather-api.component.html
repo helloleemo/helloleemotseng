@@ -3,15 +3,27 @@
   <p class="text-2xl pl-2 font-medium">Back to platform</p>
 </app-template>
 
-<div class="mx-auto max-w-screen-lg pt-[100px] sm:pt-[200px]">
+<!-- background -->
+
+<div
+  [class]="selectedLocation !== '' ? 'bg-zinc-400' : 'bg-bgcolor'"
+  class="bg-bgcolor absolute w-[100vw] h-[100vh] top-0 left-0 -z-20 transition-all duration-[3000ms]"
+></div>
+
+<!-- weather -->
+<div class="mx-auto max-w-screen-lg h-[100vh] pt-[120px] sm:pt-[200px]">
   <div class="flex flex-row gap flex-wrap gap-y-3 justify-center items-center">
-    <pre class="font-bold text-3xl text-dark/50 spaced-text monospace-text">
+    <pre
+      [class]="selectedLocation !== '' ? 'text-white/80' : 'text-dark/50'"
+      class="font-bold text-3xl spaced-text monospace-text transition-all duration-[1000ms]"
+    >
 都是WEATHER你</pre
     >
 
     <div class="w-full text-center">
       <div class="px-2">
         <select
+          (input)="getInfo()"
           name="cities"
           class="w-[300px] rounded-md border border-dark/30 p-2"
           [(ngModel)]="selectedLocation"
@@ -24,22 +36,72 @@
         </select>
       </div>
     </div>
-    <button
-      class="w-[300px] hover:bg-dark/5 transition-colors border border-dark/30 py-1 px-5 rounded-md"
-      (click)="getInfo()"
-    >
-      <p class="text-dark/80">取得該地區天氣資訊</p>
-    </button>
-  </div>
-</div>
+    @if (selectedLocation) {
+    <div class="info">
+      <div
+        class="weatherCard w-[300px] bg-white drop-shadow-md flex flex-col gap-3 justify-center items-center rounded-lg p-5 px-10"
+      >
+        <p class="text-sm text-dark/60">
+          {{ today.year }}年 <span>{{ today.month }}</span
+          >月<span>{{ today.day }}</span
+          >日
+        </p>
 
-<div class="info">
-  <div class="location">OOO</div>
-  <div class="grid grid-cols-3 gap-3 mx-auto max-w-screen-lg">
-    <div class="border border-red-400 w-full h-[300px]"></div>
-    <div class="border border-red-400 w-full h-[300px]"></div>
-    <div class="border border-red-400 w-full h-[300px]"></div>
+        <div class="location text-start text-2xl">{{ selectedLocation }}</div>
+        <div class="border-b-2 w-full my-3"></div>
+        <div class="temp flex">
+          <div class="nowTemp flex items-center gap-5">
+            @if (nowTemp > 25) {<mat-icon
+              style="
+                color: rgb(234, 210, 158);
+                height: 50px;
+                width: 50px;
+                font-size: 50px;
+              "
+              >wb_sunny</mat-icon
+            >} @else if (nowTemp <= 25 && nowTemp >= 18 ) {<mat-icon
+              style="
+                color: rgb(158, 210, 234);
+                height: 50px;
+                width: 50px;
+                font-size: 50px;
+              "
+              >wb_cloudy</mat-icon
+            >
 
-    <div class="pb-[200px]"></div>
+            } @else if ( nowTemp < 18) {
+            <mat-icon
+              style="
+                color: rgb(158, 234, 210);
+                height: 50px;
+                width: 50px;
+                font-size: 50px;
+              "
+              >ac_unit</mat-icon
+            >
+
+            }
+
+            <div>
+              <p class="text-base text-dark/40 pb-1">現在溫度</p>
+              <p class="text-5xl text-dark/80">
+                {{ nowTemp }}<span class="text-2xl">°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-right text-base text-dark/80 pb-2">
+            {{ description }}
+          </p>
+          <p class="text-right text-sm text-dark/60">
+            最高溫 <span>{{ maxTemp }}</span
+            >°C｜最低溫 <span>{{ minTemp }}</span
+            >°C
+          </p>
+        </div>
+      </div>
+    </div>
+    }
   </div>
 </div>

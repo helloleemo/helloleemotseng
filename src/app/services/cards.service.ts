@@ -23,7 +23,7 @@ export class CardsService {
         id: 5,
         tag: ['Websites / Components'],
         name: 'Demo to Shipment Tracking System',
-        tags: ['Angular18','Rxjs','Material Design UI','UIUX'],
+        tags: ['Angular18', 'Rxjs', 'Material Design UI', 'UIUX'],
         linkto: '/template/tracking-system/shipment-summary',
         hyperlink: '',
         img: '',
@@ -39,15 +39,15 @@ export class CardsService {
         img: 'platform/website-2.webp',
         description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
         innerHtml: ''
-      },{
+      }, {
         id: 25,
         tag: ['Websites / Components'],
         name: '都是WEATHER你 with weather API',
         description: 'This is a Weather API that allows users to search for weather information by entering the city name.',
-        tags: ['Angular18','Rxjs','weather API','Tailwind',],
+        tags: ['Angular18', 'Rxjs', 'weather API', 'Tailwind',],
         linkto: '/template/weather-api',
         hyperlink: '',
-        img: '',
+        img: 'platform/weaather.webp',
         innerHtml: ``
       }, {
         id: 26,
@@ -70,6 +70,16 @@ export class CardsService {
         img: 'platform/website-3.webp',
         innerHtml: ``
       }, {
+        id: 21,
+        tag: ['Websites / Components'],
+        name: '珍奇椅購物網站 Precious Chair',
+        tags: ['Vue', 'Commercial website', 'Shopping cart'],
+        linkto: '',
+        hyperlink: 'https://helloleemo.github.io/shoppingweb/',
+        img: 'platform/website-1.webp',
+        description: 'Precious Chair website providing comprehensive information on various chairs, including shopping cart functionality.',
+        innerHtml: ''
+      }, {
         id: 22,
         tag: ['UIUX'],
         name: 'Charging System',
@@ -79,7 +89,7 @@ export class CardsService {
         img: 'platform/ui-delpot.webp',
         description: 'Charging System provides users with information about charging stations and allows them to search for charging station locations.',
         innerHtml: ''
-      }, 
+      },
       {
         id: 3,
         tag: ['UIUX'],
@@ -89,16 +99,6 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/ui-annual.webp',
         description: 'Allows VIP participents to check agendas, speakers, locations, and other information during the annual conference.',
-        innerHtml: ''
-      }, {
-        id: 21,
-        tag: ['Websites / Components'],
-        name: 'Precious Chair',
-        tags: ['Vue', 'Commercial website', 'Shopping cart'],
-        linkto: '',
-        hyperlink: '',
-        img: 'platform/website-1.webp',
-        description: 'Jenqi Chair website providing comprehensive information on various chairs, including shopping cart functionality.',
         innerHtml: ''
       }, {
         id: 4,
@@ -149,7 +149,7 @@ export class CardsService {
       }, {
         id: 7,
         tag: ['Achivements'],
-        name: '2021-2022Stanford Center on Longevity Design Challenge Asia',
+        name: '2021-2022 Stanford Center on Longevity Design Challenge Asia',
         tags: ['Product Design', 'Medical Device'],
         linkto: '',
         hyperlink: '',
@@ -162,7 +162,7 @@ export class CardsService {
         id: 17,
         tag: ['Achivements'],
         name: 'Articulation Training Cards',
-        tags: ['IEEE ECBIOS 2023 SCI','Product Design', 'Medical Device'],
+        tags: ['IEEE ECBIOS 2023 SCI', 'Product Design', 'Medical Device'],
         linkto: '',
         hyperlink: '',
         img: 'platform/UX-article.webp',
@@ -170,7 +170,7 @@ export class CardsService {
         innerHtml: `<div class="absolute left-10 bottom-10">
         <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
         </div>`
-      },{
+      }, {
         id: 9,
         tag: ['Others'],
         name: 'Banner',
@@ -183,18 +183,18 @@ export class CardsService {
       }, {
         id: 10,
         tag: ['Others'],
-        name: 'Fish',
+        name: 'Illustration works',
         tags: ['Illustration'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-2.webp',
-        description: 'Illustration works.',
+        description: '',
         innerHtml: ''
       }, {
         id: 11,
-        tag: ['Others'],
+        tag: ['Others',],
         name: 'Ho-Yi Anesthesiologist Visual System Design',
-        tags: ['CIS'],
+        tags: ['CIS','Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-3.webp',
@@ -204,7 +204,7 @@ export class CardsService {
         id: 12,
         tag: ['Others'],
         name: 'Linkoo Visual System Design',
-        tags: ['CIS'],
+        tags: ['CIS','Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-5.webp',
@@ -224,7 +224,7 @@ export class CardsService {
         id: 23,
         tag: ['Others'],
         name: 'Gingers from the Mekarang',
-        tags: ['CIS'],
+        tags: ['CIS','Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-7.webp',
