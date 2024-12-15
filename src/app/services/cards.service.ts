@@ -31,16 +31,6 @@ export class CardsService {
       //   innerHtml: ''
       // }, 
       {
-        id: 2,
-        tag: ['Websites / Components'],
-        name: 'T3co Co-working Space for Vertical Monitor',
-        tags: ['Angular18', 'Tailwind', 'Monitor', 'Material Design UI'],
-        linkto: '/template/monitor/home-menu',
-        hyperlink: '',
-        img: 'platform/website-2.webp',
-        description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
-        innerHtml: ''
-      }, {
         id: 25,
         tag: ['Websites / Components'],
         name: '都是WEATHER你 with weather API',
@@ -50,7 +40,17 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/weaather.webp',
         innerHtml: ``
-      }, {
+      },{
+        id: 2,
+        tag: ['Websites / Components'],
+        name: 'T3co Co-working Space for Vertical Monitor',
+        tags: ['Angular18', 'Tailwind', 'Monitor', 'Material Design UI'],
+        linkto: '/template/monitor/home-menu',
+        hyperlink: '',
+        img: 'platform/website-2.webp',
+        description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
+        innerHtml: ''
+      },  {
         id: 26,
         tag: ['Websites / Components'],
         name: 'Resizer Component',
