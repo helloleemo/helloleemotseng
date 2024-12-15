@@ -200,11 +200,11 @@ export class PlatformComponent implements OnInit {
     }
   }
 
-  startLoadingAnimation(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 900);
-  }
+  // startLoadingAnimation(): void {
+  //   this.isLoading = true;
+  //   setTimeout(() => {
+  //     this.isLoading = false;
+  //   }, 900);
+  // }
 
 }

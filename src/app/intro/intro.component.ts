@@ -45,19 +45,5 @@ export class IntroComponent {
     });
   }
   ngOnInit(): void {
-      window.onload = () => { // on page load
-      this.isLoading = false;
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 1000);
-    }
-  }
-
-  startLoadingAnimation(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 900);
-
   }
 }   

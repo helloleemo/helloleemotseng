@@ -15,7 +15,7 @@ interface MenuItems {
 @Component({
   selector: 'app-home-menu',
   standalone: true,
-  imports: [CommonModule, MatRippleModule, RouterModule,LoadgingComponent],
+  imports: [CommonModule, MatRippleModule, RouterModule],
   templateUrl: './home-menu.component.html',
   animations: [
     trigger('showUpAnimation', [
