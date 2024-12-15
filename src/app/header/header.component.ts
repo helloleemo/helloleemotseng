@@ -38,15 +38,15 @@ export class HeaderComponent {
     //   name: "Articles",
     //   link: "/articles"
     // },
-     {
-      name: `
-        <div class="flex items-center">
-          <i class="material-icons ">download</i>
-          <p class="sm:block hidden">CV<p>
-        </div>`,
-      link: "",
-      hyperlink: "https://drive.usercontent.google.com/u/0/uc?id=1lXNZ7-86akO1uoOMP4TNDsqjbykK4ShT&export=download"
-    }
+    //  {
+    //   name: `
+    //     <div class="flex items-center">
+    //       <i class="material-icons ">download</i>
+    //       <p class="sm:block hidden">CV<p>
+    //     </div>`,
+    //   link: "",
+    //   hyperlink: "https://drive.usercontent.google.com/u/0/uc?id=1lXNZ7-86akO1uoOMP4TNDsqjbykK4ShT&export=download"
+    // }
   ]
 
   mouseService = inject(MouseService);
