@@ -32,10 +32,12 @@ export class HeaderComponent {
     }, {
       name: "Platform",
       link: "/platform"
-    }, {
-      name: "Articles",
-      link: "/articles"
-    }, {
+    },
+    //  {
+    //   name: "Articles",
+    //   link: "/articles"
+    // },
+     {
       name: `
         <div class="flex items-center">
           <i class="material-icons ">download</i>
