@@ -1,4 +1,17 @@
 <app-header></app-header>
+<!-- looadgin -->
+@if (isLoading) {
+<div
+  [@fade]="isLoading"
+  class="fixed top-0 left-0 w-full h-full bg-[#e8e8e8]/40 flex justify-center items-center z-20"
+>
+  <app-loadging
+    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+  ></app-loadging>
+</div>
+
+}
+<!-- content -->
 <div class="max-w-5xl p-3 mx-auto pt-[100px]">
   <h1>{{ greeting }}</h1>
   <div class="pb-[50px] text-dark/80 text-lg" [innerHTML]="description"></div>

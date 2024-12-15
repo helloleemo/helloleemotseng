@@ -51,7 +51,6 @@ export class ResizerComponent implements OnInit {
 
 
   isLoading = true;
-  isAlpha = true;
   ngOnInit(): void {
     this.startLoadingAnimation();
     // window.onload = () => { // on page load
@@ -67,11 +66,8 @@ export class ResizerComponent implements OnInit {
     // });
   }
 
-
   startLoadingAnimation(): void {
     this.isLoading = true;
-    this.isAlpha = true;
-
     setTimeout(() => {
       this.isLoading = false;
     }, 2000);

@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { RouterLink } from '@angular/router';
 import { MatRippleModule } from '@angular/material/core';
+import { LoadgingComponent } from '../loadging/loadging.component';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, RouterLink, MatRippleModule],
+  imports: [CommonModule, HeaderComponent, RouterLink, MatRippleModule,LoadgingComponent],
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {
@@ -28,4 +29,18 @@ export class IntroComponent {
   img4: string = 'intro/Snipaste_2024-12-12_22-34-51.webp';
 
   rippleColor: string = 'rgba(255, 255, 255, 0.5)';
+
+
+  isLoading = true;
+  ngOnInit(): void {
+    this.startLoadingAnimation();
+  }
+
+  startLoadingAnimation(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 900);
+
+  }
 }   

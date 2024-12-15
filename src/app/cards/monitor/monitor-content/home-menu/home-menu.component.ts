@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { RouterModule } from '@angular/router';
+import { LoadgingComponent } from '../../../../loadging/loadging.component';
 
 interface MenuItems {
   name: string;
@@ -14,7 +15,7 @@ interface MenuItems {
 @Component({
   selector: 'app-home-menu',
   standalone: true,
-  imports: [CommonModule, MatRippleModule, RouterModule],
+  imports: [CommonModule, MatRippleModule, RouterModule,LoadgingComponent],
   templateUrl: './home-menu.component.html',
   animations: [
     trigger('showUpAnimation', [
@@ -26,6 +27,10 @@ interface MenuItems {
   ]
 })
 export class HomeMenuComponent {
+
+    ngOnInit(): void {
+    this.startLoadingAnimation();
+  }
 
   dynamicTitle: string = "Welcome to <br />Premiere New <br />Coworking Space.";
   rippleColor: string = 'rgba(255, 255, 255, 0.2)';
@@ -74,5 +79,13 @@ export class HomeMenuComponent {
     // }
   ];
 
+  isLoading = true;
 
+  startLoadingAnimation(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+
+  }
 }

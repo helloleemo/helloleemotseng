@@ -8,6 +8,7 @@ import { filter } from 'rxjs';
 // import { templateComponent } from '../../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SubmenuComponent } from '../../submenu/submenu.component';
+import { LoadgingComponent } from '../../../../loadging/loadging.component';
 
 interface SpaceItems {
   name: string;
@@ -20,7 +21,7 @@ interface SpaceItems {
 @Component({
   selector: 'app-space',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatRippleModule, MatIconModule,LoadgingComponent],
   templateUrl: './space.component.html',
   animations: [showUpAnimation,itemAnimation]
 })
@@ -70,6 +71,8 @@ export class SpaceComponent implements OnInit {
   isHovered = false;
 
   ngOnInit(): void {
+    this.startLoadingAnimation();
+
     // 監聽路由變化以判斷是否為子路徑
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -77,4 +80,15 @@ export class SpaceComponent implements OnInit {
         this.isChildRouteActive = !!this.route.firstChild;
       });
   }
+
+  isLoading = true;
+
+  startLoadingAnimation(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+
+  }
+
 }

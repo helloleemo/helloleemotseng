@@ -9,6 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HeaderComponent } from '../header/header.component';
 import { MatIconModule } from '@angular/material/icon';
+import { LoadgingComponent } from '../loadging/loadging.component';
 
 
 
@@ -22,7 +23,7 @@ interface tagItems {
 @Component({
   selector: 'app-platform',
   standalone: true,
-  imports: [CommonModule, MatRipple, RouterLink, HeaderComponent, MatIconModule],
+  imports: [CommonModule, MatRipple, RouterLink, HeaderComponent, MatIconModule,LoadgingComponent],
   templateUrl: './platform.component.html',
   animations: [
     trigger('hoverAnimation', [
@@ -89,6 +90,8 @@ export class PlatformComponent implements OnInit {
   cardList: CardInterface[] = [];
 
   ngOnInit(): void {
+    this.startLoadingAnimation();
+
     this.cardList = this.cardsService.cardsList();
     this.initializeCardStates();
     this.setupIntersectionObserver();
@@ -182,6 +185,15 @@ export class PlatformComponent implements OnInit {
     if (this.hoverStates[index] !== undefined) {
       this.hoverStates[index] = false;
     }
+  }
+
+    isLoading = true;
+  startLoadingAnimation(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 900);
+
   }
 
 }
