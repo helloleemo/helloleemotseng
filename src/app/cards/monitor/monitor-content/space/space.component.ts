@@ -67,11 +67,9 @@ export class SpaceComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
-
   isHovered = false;
 
   ngOnInit(): void {
-    this.startLoadingAnimation();
 
     // 監聽路由變化以判斷是否為子路徑
     this.router.events
@@ -79,16 +77,6 @@ export class SpaceComponent implements OnInit {
       .subscribe(() => {
         this.isChildRouteActive = !!this.route.firstChild;
       });
-  }
-
-  isLoading = true;
-
-  startLoadingAnimation(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-
   }
 
 }

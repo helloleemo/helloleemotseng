@@ -28,22 +28,6 @@ interface MenuItems {
 })
 export class HomeMenuComponent {
 
-
-
-    isLoading = false;
-  constructor(private router: Router) {
-    this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationStart) {
-        this.isLoading = true;
-      } else if (event instanceof NavigationEnd || event instanceof NavigationError) {
-
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 500); 
-      }
-    });
-  }
-
     ngOnInit(): void {
   }
 
