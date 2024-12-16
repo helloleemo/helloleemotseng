@@ -40,6 +40,16 @@ export class CardsService {
         hyperlink: 'https://t3ex-t3co.com/',
         img: 'platform/Snipaste_2024-12-16_11-16-45.webp',
         innerHtml: ``
+      }, {
+        id: 21,
+        tag: ['Websites / Components'],
+        name: '珍奇椅購物網站 Precious Chair',
+        tags: ['Vue', 'Commercial website', 'Shopping cart'],
+        linkto: '',
+        hyperlink: 'https://helloleemo.github.io/shoppingweb/',
+        img: 'platform/website-1.webp',
+        description: 'Precious Chair website providing comprehensive information on various chairs, including shopping cart functionality.',
+        innerHtml: ''
       },
       {
         id: 25,
@@ -61,7 +71,7 @@ export class CardsService {
         img: 'platform/website-2.webp',
         description: 'Provides introductions to spaces and plans for business and customer discussions, accessible through a vertical monitor interface.',
         innerHtml: ''
-      },  {
+      }, {
         id: 26,
         tag: ['Websites / Components'],
         name: 'Resizer Component',
@@ -81,16 +91,6 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/website-3.webp',
         innerHtml: ``
-      }, {
-        id: 21,
-        tag: ['Websites / Components'],
-        name: '珍奇椅購物網站 Precious Chair',
-        tags: ['Vue', 'Commercial website', 'Shopping cart'],
-        linkto: '',
-        hyperlink: 'https://helloleemo.github.io/shoppingweb/',
-        img: 'platform/website-1.webp',
-        description: 'Precious Chair website providing comprehensive information on various chairs, including shopping cart functionality.',
-        innerHtml: ''
       }, {
         id: 22,
         tag: ['UIUX'],
@@ -186,7 +186,7 @@ export class CardsService {
         id: 11,
         tag: ['Others',],
         name: 'Ho-Yi Anesthesiologist Visual System Design',
-        tags: ['CIS','Registered Trademark'],
+        tags: ['CIS', 'Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-3.webp',
@@ -196,7 +196,7 @@ export class CardsService {
         id: 12,
         tag: ['Others'],
         name: 'Linkoo Visual System Design',
-        tags: ['CIS','Registered Trademark'],
+        tags: ['CIS', 'Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-5.webp',
@@ -216,7 +216,7 @@ export class CardsService {
         id: 23,
         tag: ['Others'],
         name: 'Gingers from the Mekarang',
-        tags: ['CIS','Registered Trademark'],
+        tags: ['CIS', 'Registered Trademark'],
         linkto: '',
         hyperlink: '',
         img: 'platform/graphics-7.webp',
@@ -254,7 +254,7 @@ export class CardsService {
         innerHtml: `<div class="absolute left-10 bottom-10">
   <img src="platform/award.webp" class="w-[180px] object-cover" alt="">
   </div>`
-      },{
+      }, {
         id: 9,
         tag: ['Others'],
         name: 'Banner',
@@ -274,7 +274,7 @@ export class CardsService {
         img: 'platform/graphics-2.webp',
         description: '',
         innerHtml: ''
-      }, 
+      },
     ];
   }
 }
