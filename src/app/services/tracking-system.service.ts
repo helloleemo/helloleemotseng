@@ -16,8 +16,6 @@ export class MainServiceService {
   flightApiUrl = environment.flightApiUrl;
   fileApiUrl = environment.fileApiUrl;
 
-  
-
   getMilestoneData():Observable<any>{
     return this.http.get(this.milestoneApiUrl)
   }

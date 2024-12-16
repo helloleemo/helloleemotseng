@@ -33,6 +33,17 @@ export class CardsService {
       {
         id: 25,
         tag: ['Websites / Components'],
+        name: 'T3 COWORKING SPACE',
+        description: 'T3CO is a modern coworking space designed to help you do your best work.',
+        tags: ['Tailwind', 'JS'],
+        linkto: '',
+        hyperlink: 'https://t3ex-t3co.com/',
+        img: 'platform/Snipaste_2024-12-16_11-16-45.webp',
+        innerHtml: ``
+      },
+      {
+        id: 25,
+        tag: ['Websites / Components'],
         name: 'Weather API',
         description: 'This is a Weather API that allows users to search for weather information by entering the city name.',
         tags: ['Angular18', 'Rxjs', 'weather API', 'Tailwind',],
@@ -40,7 +51,7 @@ export class CardsService {
         hyperlink: '',
         img: 'platform/weaather.webp',
         innerHtml: ``
-      },{
+      }, {
         id: 2,
         tag: ['Websites / Components'],
         name: 'T3co Co-working Space for Vertical Monitor',
