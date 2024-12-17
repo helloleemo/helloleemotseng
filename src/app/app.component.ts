@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MouseService } from './services/mouse.service';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 

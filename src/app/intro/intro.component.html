@@ -125,6 +125,8 @@
   <div class="max-w-5xl p-3 mx-auto flex flex-col justify-center">
     <p class="pb-5 text-xl font-semibold">See More...</p>
     <a
+      (mouseenter)="mouseService.togglePointer(true)"
+      (mouseleave)="mouseService.togglePointer(false)"
       matRipple
       class="sm:hover:bg-dark/90 mx-auto bg-dark w-fit py-3 px-10 rounded-full"
       routerLink="/platform"

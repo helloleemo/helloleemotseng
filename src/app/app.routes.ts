@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { ChildrenOutletContexts, Routes } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./intro/intro.component').then(m => m.IntroComponent) },
@@ -28,11 +28,17 @@ export const routes: Routes = [
         path: 'tracking-system',
         loadComponent: () => import('./cards/tracking-system/tracking-system.component').then(m => m.TrackingSystemComponent),
         children: [
-          {path: 'shipment-summary', loadComponent: () => import('./cards/tracking-system/shipment-summary/shipment-summary.component').then(m => m.ShipmentSummaryComponent)},
+          { path: 'shipment-summary', loadComponent: () => import('./cards/tracking-system/shipment-summary/shipment-summary.component').then(m => m.ShipmentSummaryComponent) },
           { path: 'login', loadComponent: () => import('./cards/tracking-system/login/login.component').then(m => m.LoginComponent) },
         ]
       }
     ]
   },
-  { path: 'articles', loadComponent: () => import('./articles/articles/articles.component').then(m => m.ArticlesComponent) },
+  { path: 'articles', 
+    loadComponent: () => import('./articles/articles/articles.component').then(m => m.ArticlesComponent),
+    children: [
+      { path: 'devlog-intro', loadComponent: () => import('./articles/devlog-intro/devlog-intro.component').then(m => m.DevlogIntroComponent) },
+      { path: ':id', loadComponent: () => import('./articles/article-content/article-content.component').then(m => m.ArticleContentComponent) },
+    ]
+  }
 ];

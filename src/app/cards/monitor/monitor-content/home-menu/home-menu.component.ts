@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { NavigationEnd, NavigationError, NavigationStart, Router, RouterModule, Event } from '@angular/router';
-import { LoadgingComponent } from '../../../../loadging/loadging.component';
+import { LoadgingComponent } from '../../../../components/loadging/loadging.component';
 
 interface MenuItems {
   name: string;

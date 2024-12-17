@@ -7,8 +7,8 @@ import { itemAnimation, showUpAnimation } from '../../animation';
 import { filter } from 'rxjs';
 // import { templateComponent } from '../../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
-import { SubmenuComponent } from '../../submenu/submenu.component';
-import { LoadgingComponent } from '../../../../loadging/loadging.component';
+
+import { LoadgingComponent } from '../../../../components/loadging/loadging.component';
 
 interface SpaceItems {
   name: string;

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationError, RouterLink, RouterOutlet, Event as RouterEvent } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-import { LoadgingComponent } from '../../loadging/loadging.component';
+import { LoadgingComponent } from '../../components/loadging/loadging.component';
 
 
 

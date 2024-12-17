@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../components/header/header.component';
 import { Router, NavigationStart, NavigationEnd, NavigationError, RouterLink, Event } from '@angular/router';
 import { MatRippleModule } from '@angular/material/core';
-import { LoadgingComponent } from '../loadging/loadging.component';
+import { LoadgingComponent } from '../components/loadging/loadging.component';
+import { MouseService } from '../services/mouse.service';
 
 @Component({
   selector: 'app-intro',
@@ -14,6 +15,14 @@ import { LoadgingComponent } from '../loadging/loadging.component';
   templateUrl: './intro.component.html',
 })
 export class IntroComponent {
+
+  mouseService = inject(MouseService);
+  
+
+
+
+
+
   greeting: string = `HELLO, I'M LEEMO`;
   description: string = `<p>Frontend Developer.</p>
     <p>I am a frontend developer, focused on frontend framework technologies, developing web pages, user interface experiences, and designs. Also skilled in multimedia design and cross-functional collaboration.</p>`;
@@ -46,4 +55,10 @@ export class IntroComponent {
   }
   ngOnInit(): void {
   }
+
+
+
+
+
+
 }   

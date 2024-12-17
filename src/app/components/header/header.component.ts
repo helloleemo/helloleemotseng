@@ -4,7 +4,7 @@ import { Component, HostListener, inject } from '@angular/core';
 
 import { MatRippleModule } from '@angular/material/core';
 import { Router, RouterModule } from '@angular/router';
-import { MouseService } from '../services/mouse.service';
+import { MouseService } from '../../services/mouse.service';
 
 
 

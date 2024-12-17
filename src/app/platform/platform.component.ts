@@ -7,9 +7,9 @@ import { CardsService } from '../services/cards.service';
 import { CardInterface } from '../services/cards.service';
 import { NavigationEnd, NavigationError, NavigationStart, Router, RouterLink, RouterOutlet, Event } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
-import { LoadgingComponent } from '../loadging/loadging.component';
+import { LoadgingComponent } from '../components/loadging/loadging.component';
 
 
 

@@ -5,7 +5,7 @@ import { TemplateComponent } from '../template/template.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { LoadgingComponent } from '../../loadging/loadging.component';
+import { LoadgingComponent } from '../../components/loadging/loadging.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 
