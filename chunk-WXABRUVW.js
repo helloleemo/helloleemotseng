@@ -1,0 +1,1 @@
+import{Ib as o,Jb as a,ac as i,hc as s,la as t}from"./chunk-BNVGZSW7.js";var p=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-login"]],standalone:!0,features:[s],decls:2,vars:0,template:function(e,r){e&1&&(o(0,"p"),i(1,"login works!"),a())},encapsulation:2})};export{p as LoginComponent};

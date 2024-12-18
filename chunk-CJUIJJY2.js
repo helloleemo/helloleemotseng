@@ -1,0 +1,1 @@
+import{Ib as o,Jb as a,ac as i,hc as r,la as n}from"./chunk-BNVGZSW7.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-article-content"]],standalone:!0,features:[r],decls:2,vars:0,template:function(e,l){e&1&&(o(0,"p"),i(1,"article-content works!"),a())}})};export{c as ArticleContentComponent};
